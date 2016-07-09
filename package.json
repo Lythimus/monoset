@@ -1,15 +1,12 @@
 {
-  "name": "monoset",
+  "name": "nattosoup-monoset",
   "version": "1.0.2",
-  "description": "Drupal 8 Theme",
-  "author": "Andrei Zvonkov < zvonkov@gmail.com>",
-  "homepage": "http://subtleshift.net",
+  "description": "Nattosoup Drupal 8 Theme",
+  "author": "Joseph Coco < josephcoco@protonmail.ch and Andrei Zvonkov < zvonkov@gmail.com>",
+  "homepage": "http://nattosoup.com",
   "repository": {
     "type": "git",
-    "url": "git@github.com:zetagraph/monoset.git"
-  },
-  "bugs": {
-    "url": "https://github.com/zetagraph/monoset/issues"
+    "url": "git@github.com:Lythimus/monoset.git"
   },
   "licenses": [
     {
