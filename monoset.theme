@@ -18,3 +18,24 @@ function monoset_preprocess_page(&$variables) {
     $variables['#attached']['library'][] = 'monoset/front-page';
   }
 }
+
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter() for form templates.
+ * @param array $suggestions
+ * @param array $variables
+ */
+function monoset_theme_suggestions_block_alter(array &$suggestions, array $variables) {
+  if (isset($variables['elements']['content']['#block_content'])) {
+    array_splice($suggestions, 1, 0, 'block__content_type__' . $variables['elements']['content']['#block_content']->bundle());
+  }
+}
+
+/**
+ * Implements hook_preprocess_block().
+ */
+function monoset_preprocess_block(&$variables) {
+  if (isset($variables['elements']['content']['#block_content']) && property_exists($variables['elements']['content']['#block_content'], 'field_hero_image')) {
+	  $variables['block_content'] = $variables['elements']['content']['#block_content']->get('field_hero_image');
+	}
+}
