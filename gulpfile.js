@@ -129,7 +129,7 @@ gulp.task('browser-sync', function() {
   ];
   //initialize browsersync
   browserSync.init(files, {
-    proxy: "d8.dev" // BrowserSync proxy, change to match your local environment
+    proxy: "nattosoup.dev.dd" // BrowserSync proxy, change to match your local environment
   });
 });
 

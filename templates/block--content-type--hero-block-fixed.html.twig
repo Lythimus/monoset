@@ -28,8 +28,8 @@
  */
 #}
 
-<section{{ attributes.setAttribute('style', 'background-image: url(' ~ file_url(content.field_hero_image['#items'].entity.uri.value) ~ ');').addClass('hero-block hero-block-fixed') }} data-speed="4">
-		<div class="container">
+<section{{ attributes.setAttribute('style', 'background-image: url(' ~ file_url(content.field_hero_image['#items'].entity.uri.value) ~ ');').addClass('hero-block hero-block-fixed cover') }} data-speed="4">
+		<div class="contain">
 				<div class="row">
 					  {{ title_prefix }}
 					  {% if label %}
