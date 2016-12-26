@@ -2,7 +2,9 @@
 
 Uses Node.js, Gulp, BrowserSync for Sass compiling, task running and Browser Syncing.
 
-**Demo**: http://subtleshift.net
+![Screenshot](https://www.drupal.org/files/project-images/monoset-screen-shot.jpg)
+
+**Demo**: http://subtleshift.me
 
 ## Requirements
 - Node.js
