@@ -8,7 +8,7 @@
  <header class="header-main">
   <div class="menu-btn open" aria-hidden="true">&#9776; Menu</div>
   <div class="contain">
-    <a  class ="logo" href="{{ front_page }}" title="{{ site_name }} » {{ site_slogan }}">
+    <a class="logo" href="{{ front_page }}" title="{{ site_name }} » {{ site_slogan }}">
       <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" width="20px" height="26px" viewBox="0 0 20 26" version="1.1">
         <title>Logo</title>
         <description>Logo</description>
@@ -42,45 +42,35 @@
   {% if is_front %}
     <div class="front">
 
-      <section class="cover">
-        <div class="contain">
-          {% if page.front_one %}
-            {{ page.front_one }}
-          {% endif %}
-        </div>
+			{% if page.front_one %}
+				{{ page.front_one }}
+			{% endif %}
+
+      <section id="features" class="front-section">
+				{% if page.front_two %}
+					{{ page.front_two }}
+				{% endif %}
       </section>
 
-      <section id="features" class="front-section features">
-        <div class="contain">
-          {% if page.front_two %}
-            {{ page.front_two }}
-          {% endif %}
-        </div>
+      <section class="front-section">
+				{% if page.front_three %}
+					{{ page.front_three }}
+				{% endif %}
       </section>
 
-      <section class="front-section icons">
-        <div class="contain">
-          {% if page.front_three %}
-            {{ page.front_three }}
-          {% endif %}
-        </div>
+      <section class="front-section">
+				{% if page.front_four %}
+					{{ page.front_four }}
+				{% endif %}
       </section>
 
-      <section class="front-section posts">
-        {% if page.front_four %}
-          {{ page.front_four }}
-        {% endif %}
-      </section>
-
-      <section class="front-section news">
-        <div class="contain">
+      <section class="front-section">
           {% if page.front_five %}
             {{ page.front_five }}
           {% endif %}
-        </div>
       </section>
 
-      <section class="front-section featured">
+      <section class="front-section">
         <div class="featured-box">
           {% if page.front_six %}
             {{ page.front_six }}
@@ -93,12 +83,10 @@
         </div>
       </section>
 
-      <section class="front-section source">
-        <div class="contain">
+      <section class="front-section">
           {% if page.front_eight %}
             {{ page.front_eight }}
           {% endif %}
-        </div>
       </section>
 
     </div>
@@ -125,10 +113,6 @@
           <div class="tabs-secondary clearfix" role="navigation">{{ secondary_local_tasks }}</div>
         {% endif %}
 
-        {# {{ kint() }} #}
-        {# {{ kint(page) }} #}
-        {# Requiters Devel Module  #}
-
         {{ title_prefix }}
         {% if title %}
           <h1 class="page-title">{{ title }}</h1>
@@ -153,12 +137,8 @@
     </div>
   </div>
 </div>
-<footer class="footer-main">
-  <div class="contain">
+<footer class="footer-main bg-primary">
     {% if page.footer %}
       {{ page.footer }}
     {% endif %}
-    <a class="twitter" href="https://twitter.com/zetagraph"><img class="twitter-icon inject-svg" data-src="/themes/monoset/icons/twitter.svg" alt="twitter"></a>
-    <a class="top-link" href="#top"><img class="arrow-up inject-svg" data-src="/themes/monoset/icons/chevron-up.svg" alt="chevron-up"></a>
-  </div>
 </footer>

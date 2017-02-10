@@ -5,7 +5,7 @@
 
       // Smooth Scroll to Anchor Links
       $(function () {
-        $('a[href*=#]:not([href=#])').click(function () {
+        $('a[href*="#"]:not([href="#"])').click(function () {
           if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
             var headerHeight = $('.header-main').outerHeight();
             var target = $(this.hash);
@@ -29,7 +29,7 @@
       }
 
       // Elements to inject
-      var mySVGsToInject = document.querySelectorAll('img.inject-svg');
+      var mySVGsToInject = document.querySelectorAll('.inject-svg');
 
       // Options
       var injectorOptions = {
@@ -40,6 +40,9 @@
       // Trigger the injection
       SVGInjector(mySVGsToInject, injectorOptions, function (totalSVGsInjected) {});
 
+			$('footer .request-headline').bigtext({
+					childSelector: 'div'
+			});
     }
   };
 })(jQuery, Drupal);

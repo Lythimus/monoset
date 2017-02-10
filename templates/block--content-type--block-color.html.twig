@@ -28,19 +28,21 @@
  */
 #}
 
-<section{{ attributes.addClass('block-color') }} data-speed="4">
+<section{{ attributes.addClass('block-color') }} data-speed="4" style="background-color: {{ content['field_background_color'][0]['#markup'][:7] }}; color: {{ content['field_text_color'][0]['#markup'][:7] }};">
 		<div class="container">
-				<div class="row">
-					  {{ title_prefix }}
-					  {% if label %}
-      		  <h2{{ title_attributes }}>{{ label }}</h2>
-					  {% endif %}
-					  {{ title_suffix }}
-					  {% block content %}
-						<div class="col-lg-12 text-center wow fadeInRight">
-								{{ content.body }}
+				<div class="contain">
+						<div class="row">
+								{{ title_prefix }}
+								{% if label %}
+								<h2{{ title_attributes }}>{{ label }}</h2>
+								{% endif %}
+								{{ title_suffix }}
+								{% block content %}
+								<div class="col-lg-12 text-center">
+										{{ content.body }}
+								</div>
+								{% endblock %}
 						</div>
-					  {% endblock %}
 				</div>
 		</div>
 </section>

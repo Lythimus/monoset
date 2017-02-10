@@ -27,22 +27,13 @@
  * @ingroup themeable
  */
 #}
-
-<section{{ attributes.setAttribute('style', 'background-image: url(' ~ file_url(content.field_hero_image['#items'].entity.uri.value) ~ ');').addClass('hero-block') }} data-speed="4">
-		<div class="container">
-				<div class="contain">
-						<div class="row">
-								{{ title_prefix }}
-								{% if label %}
-								<h2{{ title_attributes }}>{{ label }}</h2>
-								{% endif %}
-								{{ title_suffix }}
-								{% block content %}
-								<div class="col-lg-12 text-center">
-										{{ content.body }}
-								</div>
-								{% endblock %}
-						</div>
-				</div>
-		</div>
-</section>
+<div{{ attributes.addClass('contain') }}>
+  {{ title_prefix }}
+  {% if label %}
+    <h2{{ title_attributes }}>{{ label }}</h2>
+  {% endif %}
+  {{ title_suffix }}
+  {% block content %}
+    {{ content }}
+  {% endblock %}
+</div>

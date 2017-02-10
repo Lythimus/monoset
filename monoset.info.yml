@@ -5,8 +5,11 @@ version: 1.0
 core: 8.x
 screenshot: images/screenshot.png
 libraries:
+ - monoset/fontawesome
  - monoset/global
  - monoset/vendor
+
+
 
 stylesheets-remove:
   - core/assets/vendor/normalize-css/normalize.css
