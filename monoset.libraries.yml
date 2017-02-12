@@ -15,6 +15,13 @@ global:
     - core/jquery.once
     - core/modernizr
 
+fontawesome:
+  version: 4.7
+  js:
+    https://use.fontawesome.com/e1ce68de73.js: { type: external, minified: true }
+  dependencies:
+    - core/jquery
+
 #Vendor Library
 vendor:
   version: 1.x
@@ -32,6 +39,7 @@ front-page:
     theme:
       styles/vendor/animate.css: { weight: -2 }
   js:
+    scripts/vendor/jquery.fittext.js: { scope: footer , weight: -7 }
     scripts/vendor/bigtext.js: { scope: footer , weight: -6 }
     scripts/vendor/wow.min.js: { scope: footer, weight: -5 }
     scripts/front.js: { scope: footer, weight: -4 }

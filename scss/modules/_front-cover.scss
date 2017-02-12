@@ -1,19 +1,6 @@
 // Front Cover
 
 .cover {
-  width: 100%;
-  height: 100vh;
-  background: url(../images/cover.jpg) no-repeat 0 0;
-  border-radius: 4px;
-  box-shadow: 5px 1px 0px 1px #f04e29;
-  background-size: cover;
-  animation: blurIn 1.5s;
-  display: flex;
-  .no-touchevents & {
-    @include breakpoint(md) {
-      background-attachment: fixed;
-    }
-  }
   .cover-title {
     text-align: center;
     margin: 40% 0 0 0;
@@ -28,53 +15,6 @@
       }
     }
   }
-  h1 {
-    @include font-size(40px);
-    margin: 0 0 1rem 0;
-    line-height: 1;
-    color: $grey-500;
-    @include breakpoint(md) {
-      @include font-size(94px);
-    }
-  }
-  .drupal-logo {
-    vertical-align: bottom;
-    width: 50px;
-    height: 56px;
-    @include breakpoint(md) {
-      width: 100px;
-      height: 113px;
-    }
-  }
-  .drupal-logo path {
-    fill: $grey-400;
-    transition: all .3s;
-  }
-  .cover-title:hover .drupal-logo path {
-    fill: $blue;
-  }
-  .intro-title {
-    @include font-size(20px);
-    margin: 0 0 2rem 0;
-  }
-  .cta-button {
-    display: inline-block;
-    vertical-align: top;
-    padding: 8px 12px 8px 25px;
-    border-radius: 40px;
-    background: rgba($black, 0.25);
-    color: $grey-50;
-    font-weight: $normal;
-    letter-spacing: 1px;
-    @include breakpoint(md) {
-      border: 2px solid $grey-200;
-      background: none;
-    }
-
-    &:hover {
-      background: rgba($black, 0.25);
-    }
-  }
   .arrow {
     margin: -14px 0 -11px -4px;
     width: 32px;
@@ -84,6 +24,436 @@
     animation: pulsate 2s linear infinite;
     opacity: 1;
   }
+}
+
+.btn {
+	display: inline-block;
+	padding: 6px 12px;
+	margin-bottom: 0;
+	font-size: 14px;
+	line-height: 1.42857143;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	-ms-touch-action: manipulation;
+	touch-action: manipulation;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	background-image: none;
+	border: 1px solid transparent;
+	border-radius: 300px;
+	text-transform: uppercase;
+	font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+	font-weight: 700;
+	&.btn-xl {
+		padding: 15px 30px;
+	}
+}
+
+.block-color .btn-default {
+  & {
+  	border-color: #ededed;
+    color: #222;
+    background-color: #f2f2f2;
+  }
+	&:hover, &:focus, &.focus, &:active, &.active {
+		border-color: #ddd;
+		color: #222;
+		background-color: #e2e2e2;
+	}
+}
+
+#block-7karaheroimage {
+	background-size: cover;
+	background-position: center;
+}
+
+.hero-block {
+	font-size: 18px;
+	line-height: 1.5;
+
+  strong {
+		display: block;
+		color: rgba(255,255,255,.7);
+		margin-bottom: 3em;
+    background-color: rgba(73,69,66,0.6);
+    padding: 0.5em;
+  }
+}
+
+body {
+    webkit-tap-highlight-color: #222;
+}
+
+.kara-title {
+    max-width:100%;
+    width:auto\9;
+    margin: 0 auto;
+}
+.kara-title-content {
+    position: relative;
+}
+.kara-title .kara-logo {
+    position: absolute;
+    height: 40%;
+    top: 40%;
+    left: 37%;
+    
+    /* background-color: rgba(240,255,240,0.6); */
+    /* background-color: rgba(255, 255, 255,0.7); 
+    padding: 1em; */
+}
+.kara-title .title-ribbon {
+  width: 100%;
+}
+header h1, header p strong {
+  background-color: rgba(73,69,66,0.6);
+}
+.nattosoup-logo {
+  height: 60px;
+  float: left;
+  margin: -5px 5px;
+}
+.baker-and-taylor-logo {
+  height: 30px;
+  margin: -3px 3px 3px 0;
+}
+.amazon-logo {
+  height: 23px;
+  margin: 0 0 -6px 2px;
+}
+.nattosoup-logo-buy {
+  height: 55px;
+  margin: -15px 5px;
+}
+.purchase-kara .col {
+  margin-top: 1em;
+}
+#block-aboutbeccahillburn {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    padding: 100px 0;
+    margin: -50px auto;
+}
+.becca-intro {
+    position: relative;
+    z-index: 5;
+    cursor: pointer;
+}
+.becca-intro:before {
+    color: rgba(219,59,4,0.65);
+    position:absolute;
+    font-family: FontAwesome;
+    top:-130px;
+    left:20px;
+    content: "\f16a";
+    font-size: 400px;
+    z-index: -2;
+    margin-left: -20px;
+    margin-top: -20px;
+}
+.becca-intro:hover:before {
+    color: rgba(219,59,4,1);
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease-out; 
+            transition: all 0.3s ease-out; 
+}
+.becca-intro:hover > h1 {
+    opacity: 0.3;
+    -webkit-transition: all 0.3s ease-out; 
+            transition: all 0.3s ease-out; 
+}
+.becca-intro:hover > span {
+    opacity: 0.1;
+    -webkit-transition: all 0.3s ease-out; 
+            transition: all 0.3s ease-out; 
+}
+@media(max-width:767px) {
+  .kara-title .title-ribbon {
+    width: 120%;
+    margin-left: -10%;
+  }
+  #block-aboutbeccahillburn .container {
+    padding-top: 30%;
+    margin-bottom: -10%;
+  }
+  #block-aboutbeccahillburn span, #block-aboutbeccahillburn h1 {
+    background-color: rgba(73,69,66,0.6);
+  }
+  .block-color h2 span {
+    margin: 0 -50%;
+  }
+  #block-aboutbeccahillburn .tweet-bubble {
+    display: none;
+  }
+}
+.block-color h1, .block-color h2, .block-color h3, .block-color p {
+  color: rgb(63,59,56);
+}
+footer .inject-svg {
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    height: 1em;
+    width: 1em;
+    display: block;
+    margin: 0 auto;
+}
+/* social media scaling icons */
+footer .fa {
+  margin-top: 0.5em;
+  font-size: 42px;
+  color: #DB3B04;
+  -webkit-transition: all .35s;
+  -moz-transition: all .35s;
+  transition: all .35s;
+  height: 40px;
+}
+footer .fa:hover {
+  color: #fff;
+}
+
+@media only screen and (min-width : 992px) {
+  footer .fa {
+    font-size: 56px;
+  }
+}
+.book-bottom-animation {
+  width: 100%;
+  height: 58px;
+  margin-bottom: -58px;
+}
+#beccaHillburnTweet .user, #beccaHillburnTweet .timePosted, #beccaHillburnTweet .interact {
+  display: none;
+}
+#block-aboutbeccahillburn .fa-comment {
+  color: rgba(73,69,66,0.8);
+}
+#block-aboutbeccahillburn .fa-comment {
+  font-size: 340px;
+  margin-top: -230px;
+}
+#block-aboutbeccahillburn h1 {
+  color: #9bd59b;
+}
+#block-aboutbeccahillburn .bigtext-line0, #block-aboutbeccahillburn .bigtext-line1, #block-aboutbeccahillburn .bigtext-line2, #block-aboutbeccahillburn .bigtext-line4 {
+  line-height: 70%;
+}
+#block-aboutbeccahillburn .bigtext-line0, #block-aboutbeccahillburn .bigtext-line1 {
+	&, span {
+	  font-family: $header-font;
+	}
+}
+.tweet-bubble {
+  position: relative;
+}
+.tweet-bubble #beccaHillburnTweet {
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 80%;
+  margin-top: -140px;
+  margin-left: 34px;
+  height: 160px;
+  display: inline-block;
+  border-radius: 50%;
+  text-align: center;
+}
+.tweet-bubble #beccaHillburnTweet:before {
+  content: '';
+  display: inline-block;
+  /*height:100%; COMEHERE */
+  vertical-align: middle;
+}
+.tweet-bubble #beccaHillburnTweet p.tweet {
+  vertical-align: middle;
+  display: inline-block;
+}
+
+#block-buykara-2 p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+#block-buykara-2 h2, footer h2 {
+	&, span {
+	  font-family: $header-font;
+  }
+}
+.between {
+  margin-top: -10px;
+  margin-bottom: -10px;
+}
+.tiny {
+  margin-top: -10px;
+  margin-bottom: -10px;
+}
+.vertical-rule-left {
+  border-left: 1px solid rgb(73,69,66);
+}
+
+/* Handle rules between words */
+.rule {
+    display: block;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap; 
+}
+
+.rule > strong, .rule > b {
+    position: relative;
+    display: inline-block;
+}
+
+.rule > b:before,
+.rule > b:after,
+.rule > strong:before,
+.rule > strong:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 9999px;
+    height: 1px;
+    background: #DB3B04;
+}
+
+.rule > b:before, .rule > strong:before {
+    right: 100%;
+    margin-right: 15px;
+}
+
+.rule > b:after, .rule > strong:after {
+    left: 100%;
+    margin-left: 15px;
+}
+@media(max-width:560px) {
+  .rule .extra-space {
+  }
+}
+
+#block-7karaheroimage p {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 80%;
+}
+
+.hero-block-fixed {
+  width: 100%;
+  height: 100vh;
+  border-radius: 4px;
+  box-shadow: 5px 1px 0px 1px #f04e29;
+  background-size: cover;
+  animation: blurIn 1.5s;
+  display: flex;
+  .no-touchevents & {
+    @include breakpoint(md) {
+      background-attachment: fixed;
+    }
+  }
+}
+
+.hero-block hr {
+    max-width: 50px;
+    border-color: #9bd59b;
+    border-width: 3px;
+}
+.block-color hr {
+    max-width: 50px;
+  	border-color: #DB3B04;
+    border-width: 3px;
+}
+
+header {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    z-index: -1;
+}
+
+header .header-content {
+    position: relative;
+    width: 100%;
+    padding: 100px 15px;
+    text-align: center;
+}
+
+header .header-content .header-content-inner h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: $header-font;
+}
+header .header-content .header-content-inner hr {
+    margin: 30px auto;
+}
+.text-center {
+		text-align: center;
+}
+
+.portfolio-box {
+    display: block;
+    display: flex;
+    position: relative;
+    margin: 0 auto;
+    max-width: 650px;
+}
+
+.portfolio-box-caption {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: #fff;
+    opacity: 0;
+    background: rgba(71,125,71,0.9);
+    -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    transition: all .35s;
+}
+
+.portfolio-box-caption .portfolio-box-caption-content {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    transform: translateY(-50%);
+}
+.portfolio-box-caption .portfolio-box-caption-content .project-category,
+.portfolio-box-caption .portfolio-box-caption-content .project-name {
+    padding: 0 15px;
+    font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+}
+.portfolio-box-caption .portfolio-box-caption-content .project-category {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+}
+.portfolio-box-caption .portfolio-box-caption-content .project-name {
+    font-size: 18px;
+}
+#block-projects-front .col-lg-4.col-sm-6:hover .portfolio-box-caption {
+    opacity: 1;
 }
 
 .hero-block {
@@ -411,4 +781,34 @@ header .header-content .header-content-inner hr {
 		 width: 80%;
 		 padding: 0 1rem;
   }
+}
+@media(min-width:768px) {
+    .portfolio-box-caption .portfolio-box-caption-content .project-category {
+        font-size: 16px;
+    }
+
+    .portfolio-box-caption .portfolio-box-caption-content .project-name {
+        font-size: 22px;
+    }
+}
+#block-projects-front .col-lg-4.col-sm-6 {
+		overflow: hidden;
+		padding: 0;
+}
+.bg-primary {
+	 background-color: #9BD59B;
+}
+footer .region-footer {
+		width: 100%;
+		background-color: #9BD59B;
+}
+#block-social-networks-footer-block {
+		padding-bottom: 4em;
+}
+#block-credentials .text-muted {
+		margin-bottom: 1em;
+		text-align: left;
+}
+#block-credentials .text-muted:last-child {
+		margin-bottom: 32px;
 }

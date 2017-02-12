@@ -149,7 +149,7 @@ gulp.task('styleguide:generate', function() {
         // For static style guide. Generat relative to your environment:
         // appRoot: '/themes/monoset/styleguide',
         extraHead: [
-          '<link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900">',
+          '<link href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700|Merriweather:400,400italic,700,700italic|Slackey">',
         ],
         rootPath: outputPath,
         disableEncapsulation: true,
