@@ -812,3 +812,49 @@ footer .region-footer {
 #block-credentials .text-muted:last-child {
 		margin-bottom: 32px;
 }
+
+body .content {
+	padding-bottom: 0;
+}
+#block-7karabanner img {
+  width: 90%;
+  padding-left: 5%;
+}
+body.node--type-book .region-content {
+  background: url(https://nattosoup.com/sites/default/files/inline-images/Site-Background-V1.jpg) repeat-y;
+}
+.node--type-book [aria-labelledby="book-label-1"] ul {
+		list-style-type: none;
+}
+.node--type-book [aria-labelledby="book-label-1"] li img {
+    width: 100%;
+    display: block;
+    margin-top: 
+}
+.node--type-book [aria-labelledby="book-label-1"] .previous-pages img:hover {
+		-moz-transform: scale(1.4) skewY(-3deg);
+		-webkit-transform: scale(1.4) skewY(-3deg);
+		-o-transform: scale(1.4) skewY(-3deg);
+		-ms-transform: scale(1.4) skewY(-3deg);
+		transform: scale(1.4) skewY(-3deg);
+	  -webkit-transition: all .35s ease-out;
+    -moz-transition: all .35s ease-out;
+    transition: all .35s ease-out;
+}
+.node--type-book [aria-labelledby="book-label-1"] .next-pages img:hover {
+		-moz-transform: scale(1.4) skewY(3deg);
+		-webkit-transform: scale(1.4) skewY(3deg);
+		-o-transform: scale(1.4) skewY(3deg);
+		-ms-transform: scale(1.4) skewY(3deg);
+		transform: scale(1.4) skewY(3deg);
+	  -webkit-transition: all .35s ease-out;
+    -moz-transition: all .35s ease-out;
+    transition: all .35s ease-out;
+}
+.node--type-book .node__content img {
+    width: 100%;
+}
+footer.node__meta {
+    display: none;
+}
+
