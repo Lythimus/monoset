@@ -36,20 +36,20 @@
     {% if has_links %}
       <ul>
 			<li>
-				<a href="{{path('entity.node.canonical', {'node': 2})}}" rel="prev" title="{{ 'Go to first page'|t }}"><img src="/sites/default/files/inline-images/First.gif" /></a>
+				<a href="{{path('entity.node.canonical', {'node': 2})}}" rel="prev" title="{{ 'Go to first page'|t }}"><img src="/sites/default/files/webassets/First.gif" /></a>
 			</li>
       {% if prev_url %}
         <li>
-          <a href="{{ prev_url }}" rel="prev" title="{{ 'Go to previous page'|t }}"><img src="/sites/default/files/inline-images/Back.gif" /></a>
+          <a href="{{ prev_url }}" rel="prev" title="{{ 'Go to previous page'|t }}"><img src="/sites/default/files/webassets/Back.gif" /></a>
         </li>
       {% endif %}
       {% if next_url %}
         <li>
-          <a href="{{ next_url }}" rel="next" title="{{ 'Go to next page'|t }}"><img src="/sites/default/files/inline-images/Forward.gif" /></a>
+          <a href="{{ next_url }}" rel="next" title="{{ 'Go to next page'|t }}"><img src="/sites/default/files/webassets/Forward.gif" /></a>
         </li>
       {% endif %}
 			<li>
-				<a href="{{path('entity.node.canonical', {'node': 13})}}" rel="prev" title="{{ 'Go to last page'|t }}"><img src="/sites/default/files/inline-images/Latest.gif" /></a>
+				<a href="{{path('entity.node.canonical', {'node': 13})}}" rel="prev" title="{{ 'Go to last page'|t }}"><img src="/sites/default/files/webassets/Latest.gif" /></a>
 			</li>
     </ul>
     {% endif %}
