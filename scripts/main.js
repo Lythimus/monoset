@@ -46,6 +46,25 @@
 			$('footer .request-headline').bigtext({
 					childSelector: 'div'
 			});
+
+      //  Animations
+      $(function () {
+        new WOW().init();
+      });
+
+			// Fit Text Plugin for Main Header
+			$("h1").fitText(
+					1.2, {
+							minFontSize: '35px',
+							maxFontSize: '65px'
+					}
+			);
+
+			$('#block-buykara-2 h2, #block-aboutbeccahillburn .becca-intro, #block-letmeknowwhatyouthinkofkara h2').bigtext({
+					childSelector: 'span'
+			});
+
+
     }
   };
 })(jQuery, Drupal);

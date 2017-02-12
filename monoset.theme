@@ -46,7 +46,7 @@ function monoset_preprocess_block(&$variables) {
  */
 function monoset_css_alter(&$css) {
   $theme_path = drupal_get_path('theme', 'monoset');
-  $googlefonts = 'https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700|Merriweather:400,400italic,700,700italic|Slackey';
+  $googlefonts = 'https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700|Merriweather:400,400italic,700,700italic';
   $css[$googlefonts] = array(
 		'data' => $googlefonts,
 		'type' => 'external',
