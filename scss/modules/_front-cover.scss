@@ -220,7 +220,6 @@ footer .fa {
   -webkit-transition: all .35s;
   -moz-transition: all .35s;
   transition: all .35s;
-  height: 40px;
 }
 footer .fa:hover {
   color: #fff;
@@ -852,4 +851,6 @@ body.node--type-book .region-content {
 footer.node__meta {
     display: none;
 }
-
+body .header-main .menu li a:hover {
+  color: $natbg;
+}
