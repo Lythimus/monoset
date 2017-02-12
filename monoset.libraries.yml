@@ -26,11 +26,13 @@ fontawesome:
 vendor:
   version: 1.x
   js:
-    scripts/vendor/bigtext.js: { scope: footer , weight: -6 }
-    scripts/vendor/pushy.js: { scope: footer, weight: -7 }
+    scripts/vendor/jquery.fittext.js: { scope: footer , weight: -11 }
+    scripts/vendor/bigtext.js: { scope: footer , weight: -10 }
+    scripts/vendor/pushy.js: { scope: footer, weight: -9 }
     scripts/vendor/fastclick.js: { scope: footer , weight: -8 }
-    scripts/vendor/svg-injector.min.js: { scope: footer , weight: -9 }
-    scripts/vendor/prism.js: { scope: footer , weight: -10 }
+    scripts/vendor/svg-injector.min.js: { scope: footer , weight: -7 }
+    scripts/vendor/prism.js: { scope: footer , weight: -6 }
+    scripts/vendor/wow.min.js: { scope: footer, weight: -5 }
 
 # Front Page Library
 front-page:
