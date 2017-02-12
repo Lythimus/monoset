@@ -34,30 +34,31 @@
   <nav role="navigation" aria-labelledby="book-label-{{ book_id }}" class="contain">
     {% if has_links %}
       <div class="previous-pages">
-      <ul>
-      
-            <li class="col-sm-offset-2 col-sm-2 hidden-xs">
-                <a href="{{path('entity.node.canonical', {'node': 2})}}" rel="prev" title="{{ 'Go to first page'|t }}"><img src="/sites/default/files/inline-images/First.gif" /></a>
+        <ul>
+          <li class="col-sm-offset-2 col-sm-2 hidden-xs">
+              <a href="{{path('entity.node.canonical', {'node': 2})}}" rel="prev" title="{{ 'Go to first page'|t }}"><img src="/sites/default/files/webassets/First.gif" /></a>
+          </li>
+          {% if prev_url %}
+            <li class="col-sm-2 col-xs-6">
+              <a href="{{ prev_url }}" rel="prev" title="{{ 'Go to previous page'|t }}"><img src="/sites/default/files/webassets/Back.gif" /></a>
             </li>
-      {% if prev_url %} 
-        <li class="col-sm-2 col-xs-6">
-          <a href="{{ prev_url }}" rel="prev" title="{{ 'Go to previous page'|t }}"><img src="/sites/default/files/inline-images/Back.gif" /></a>
-        </li>
-      {% endif %}
+          {% endif %}
+        </ul>
       </div>
       <div class="next-pages">
-      </ul>
-      <ul>
-      {% if next_url %} 
-        <li class="col-sm-2 col-xs-6">
-          <a href="{{ next_url }}" rel="next" title="{{ 'Go to next page'|t }}"><img src="/sites/default/files/inline-images/Forward.gif" /></a>
-        </li>
-      {% endif %} 
-            <li class="col-sm-2 hidden-xs">
-                <a href="{{path('entity.node.canonical', {'node': 13})}}" rel="prev" title="{{ 'Go to last page'|t }}"><img src="/sites/default/files/inline-images/Latest.gif" /></a>
+        </ul>
+        <ul>
+          {% if next_url %}
+            <li class="col-sm-2 col-xs-6">
+              <a href="{{ next_url }}" rel="next" title="{{ 'Go to next page'|t }}"><img src="/sites/default/files/webassets/Forward.gif" /></a>
             </li>
-    </ul>
+          {% endif %}
+            <li class="col-sm-2 hidden-xs">
+              <a href="{{path('entity.node.canonical', {'node': 13})}}" rel="prev" title="{{ 'Go to last page'|t }}"><img src="/sites/default/files/webassetss/Latest.gif" /></a>
+            </li>
+        </ul>
       </div>
     {% endif %}
   </nav>
 {% endif %}
+
