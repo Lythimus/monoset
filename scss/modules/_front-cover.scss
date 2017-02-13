@@ -725,7 +725,7 @@ footer .region-footer {
 body .content {
 	padding-bottom: 0;
 }
-body.node--type-book .region-content {
+.region-front-one, body.node--type-book .region-content {
   background: url(https://nattosoup.com/sites/default/files/webassets/Site-Background-V1.jpg) repeat-y;
 }
 .node--type-book [aria-labelledby="book-label-1"] ul {
@@ -770,3 +770,16 @@ body .header-main .menu li a:hover {
 .site-logo {
 	height: 48px;
 }
+.ComicGarden {
+  opacity: 0;
+  position: fixed;
+  bottom: 0.5em;
+  right: 0.5em;
+	-webkit-transition: all .35s;
+	-moz-transition: all .35s;
+	transition: all .35s;
+}
+.ComicGarden.sticky {
+  opacity: 1;
+}
+

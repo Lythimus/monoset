@@ -5,11 +5,18 @@
 
       // Header Tweaks
       $(window).scroll(function () {
-        if ($(this).scrollTop() > 1) {
+        var scr = $(this).scrollTop();
+        if (scr > 1) {
           $('.header-main').addClass("sticky");
         }
         else {
           $('.header-main').removeClass("sticky");
+        }
+        if (scr < jQuery('article.node--type-book, .region-front-one').offset().top + jQuery('article.node--type-book, .region-front-one').outerHeight()) {
+          $('.ComicGarden').addClass("sticky");
+        }
+        else {
+          $('.ComicGarden').removeClass("sticky");
         }
       });
 
