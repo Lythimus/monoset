@@ -25,6 +25,9 @@ fontawesome:
 #Vendor Library
 vendor:
   version: 1.x
+  css:
+    theme:
+      styles/vendor/animate.css: { weight: -2 }
   js:
     scripts/vendor/bigtext.js: { scope: footer , weight: -6 }
     scripts/vendor/pushy.js: { scope: footer, weight: -7 }

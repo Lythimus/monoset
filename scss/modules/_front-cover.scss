@@ -146,39 +146,6 @@ header h1, header p strong {
     padding: 100px 0;
     margin: -50px auto;
 }
-.becca-intro {
-    position: relative;
-    z-index: 5;
-    cursor: pointer;
-}
-.becca-intro:before {
-    color: rgba(219,59,4,0.65);
-    position:absolute;
-    font-family: FontAwesome;
-    top:-130px;
-    left:20px;
-    content: "\f16a";
-    font-size: 400px;
-    z-index: -2;
-    margin-left: -20px;
-    margin-top: -20px;
-}
-.becca-intro:hover:before {
-    color: rgba(219,59,4,1);
-    cursor: pointer;
-    -webkit-transition: all 0.3s ease-out; 
-            transition: all 0.3s ease-out; 
-}
-.becca-intro:hover > h1 {
-    opacity: 0.3;
-    -webkit-transition: all 0.3s ease-out; 
-            transition: all 0.3s ease-out; 
-}
-.becca-intro:hover > span {
-    opacity: 0.1;
-    -webkit-transition: all 0.3s ease-out; 
-            transition: all 0.3s ease-out; 
-}
 @media(max-width:767px) {
   .kara-title .title-ribbon {
     width: 120%;
@@ -500,33 +467,6 @@ header h1, header p strong {
 .becca-intro {
     position: relative;
     z-index: 5;
-    cursor: pointer;
-}
-.becca-intro:before {
-    color: rgba(219,59,4,0.65);
-    position:absolute;
-    font-family: FontAwesome;
-    top:-130px;
-    left:20px;
-    content: "\f16a";
-    font-size: 350px;
-    z-index: -2;
-}
-.becca-intro:hover:before {
-    color: rgba(219,59,4,1);
-    cursor: pointer;
-    -webkit-transition: all 0.3s ease-out; 
-            transition: all 0.3s ease-out; 
-}
-.becca-intro:hover > h1 {
-    opacity: 0.3;
-    -webkit-transition: all 0.3s ease-out; 
-            transition: all 0.3s ease-out; 
-}
-.becca-intro:hover > span {
-    opacity: 0.1;
-    -webkit-transition: all 0.3s ease-out; 
-            transition: all 0.3s ease-out; 
 }
 @media(max-width:767px) {
   .kara-title .title-ribbon {
