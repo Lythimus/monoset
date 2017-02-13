@@ -19,10 +19,10 @@
 }
 
 .content {
-  padding: 2rem 1rem;
+  padding: 2rem 1rem 0 1rem;
   min-height: 750px;
   @include breakpoint(md) {
-    padding: 7rem 0 2rem 0;
+    padding: 5rem 0 2rem 0;
     animation: fadeIn ease-in 1;
     animation-fill-mode: forwards;
     animation-duration: .3s;
@@ -30,11 +30,11 @@
 }
 
 .region-content-top {
-  margin: 0 0 2rem 0;
+  padding-bottom: 2rem;
 }
 
 .region-content {
-  margin: 0 0 2rem 0;
+  padding-bottom: 2rem;
 }
 
 .region-content-bottom {

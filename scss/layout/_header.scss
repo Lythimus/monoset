@@ -94,7 +94,7 @@ div[class$="branding"] {
   }
   a {
     display: inline-block;
-    @include font-size(14px);
+    @include font-size(17px);
     font-weight: $medium;
     text-transform: uppercase;
     color: $grey-500;
