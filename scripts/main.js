@@ -6,6 +6,16 @@
   Drupal.behaviors.customTweaks = {
     attach: function (context, settings) {
 
+      // Header Tweaks
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > 1) {
+          $('.header-main').addClass("sticky");
+        }
+        else {
+          $('.header-main').removeClass("sticky");
+        }
+      });
+
       // Smooth Scroll to Anchor Links
       $(function () {
         $('a[href*="#"]:not([href="#"])').click(function () {
@@ -63,7 +73,6 @@
 			$('#block-buykara-2 h2, #block-aboutbeccahillburn .becca-intro, #block-letmeknowwhatyouthinkofkara h2').bigtext({
 					childSelector: 'span'
 			});
-
 
     }
   };
