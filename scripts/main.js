@@ -3,6 +3,17 @@
   Drupal.behaviors.customTweaks = {
     attach: function (context, settings) {
 
+			if ($('.node--type-book')) {
+			  $(window).resize(function(ev) {
+			    if ($(window).width() > 1300) {
+			    	$('.comic-garden-tall-wrapper').show();
+			    } else {
+			    	$('.comic-garden-tall-wrapper').hide();			    	
+			    }
+			  });
+			}
+			$(window).trigger('resize');
+      // Header Tweaks
       // Header Tweaks
       $(window).scroll(function () {
         var scr = $(this).scrollTop();
@@ -13,10 +24,10 @@
           $('.header-main').removeClass("sticky");
         }
         if (scr < jQuery('article.node--type-book, .region-front-one').offset().top + jQuery('article.node--type-book, .region-front-one').outerHeight()) {
-          $('.ComicGarden').addClass("sticky");
+          $('.comic-garden-tall-wrapper .ComicGarden').addClass("sticky");
         }
         else {
-          $('.ComicGarden').removeClass("sticky");
+          $('.comic-garden-tall-wrapper .ComicGarden').removeClass("sticky");
         }
       });
 
