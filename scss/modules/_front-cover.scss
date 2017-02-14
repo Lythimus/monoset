@@ -727,22 +727,22 @@ body .content {
     width: 100%;
     display: block;
 }
-.node--type-book [aria-labelledby="book-label-1"] .previous-pages img:hover {
-		-moz-transform: scale(1.4) skewY(-3deg);
-		-webkit-transform: scale(1.4) skewY(-3deg);
-		-o-transform: scale(1.4) skewY(-3deg);
-		-ms-transform: scale(1.4) skewY(-3deg);
-		transform: scale(1.4) skewY(-3deg);
+.node--type-book [aria-labelledby="book-label-1"] .previous-pages img:hover, .node--type-book [aria-labelledby="book-label-1"] .previous-pages img:focus {
+		-moz-transform: scale(1.2) skewY(-3deg);
+		-webkit-transform: scale(1.2) skewY(-3deg);
+		-o-transform: scale(1.2) skewY(-3deg);
+		-ms-transform: scale(1.2) skewY(-3deg);
+		transform: scale(1.2) skewY(-3deg);
 	  -webkit-transition: all .35s ease-out;
     -moz-transition: all .35s ease-out;
     transition: all .35s ease-out;
 }
-.node--type-book [aria-labelledby="book-label-1"] .next-pages img:hover {
-		-moz-transform: scale(1.4) skewY(3deg);
-		-webkit-transform: scale(1.4) skewY(3deg);
-		-o-transform: scale(1.4) skewY(3deg);
-		-ms-transform: scale(1.4) skewY(3deg);
-		transform: scale(1.4) skewY(3deg);
+.node--type-book [aria-labelledby="book-label-1"] .next-pages img:hover, .node--type-book [aria-labelledby="book-label-1"] .next-pages img:focus {
+		-moz-transform: scale(1.2) skewY(3deg);
+		-webkit-transform: scale(1.2) skewY(3deg);
+		-o-transform: scale(1.2) skewY(3deg);
+		-ms-transform: scale(1.2) skewY(3deg);
+		transform: scale(1.2) skewY(3deg);
 	  -webkit-transition: all .35s ease-out;
     -moz-transition: all .35s ease-out;
     transition: all .35s ease-out;
@@ -762,24 +762,30 @@ body .header-main .menu li a:hover {
 .site-logo {
 	height: 48px;
 }
-
-.ComicGarden {
+.comic-garden-wide {
   margin: 0 auto;
-  display: block !important;
+  text-align: center;
 }
-@media (min-width: 992px) {
-	.ComicGarden {
-		opacity: 0;
-		position: fixed;
-		bottom: 0.5em;
-		right: 0.5em;
-		-webkit-transition: all .35s;
-		-moz-transition: all .35s;
-		transition: all .35s;
-	}
-	.ComicGarden.sticky {
-		opacity: 1;
-	}
+.comic-garden-wide .ComicGarden {
+	display: block;
+}
+.comic-garden-wide-wrapper .ComicGarden img {
+	width: auto;
+}
+.comic-garden-tall-wrapper {
+	display: none;
+}
+.comic-garden-tall-wrapper .ComicGarden {
+	opacity: 0;
+	position: fixed;
+	bottom: 0.5em;
+	right: 0.5em;
+	-webkit-transition: all .35s;
+	-moz-transition: all .35s;
+	transition: all .35s;
+}
+.comic-garden-tall-wrapper .ComicGarden.sticky {
+	opacity: 1;
 }
 .header-main > .contain {
 	text-align: center;
