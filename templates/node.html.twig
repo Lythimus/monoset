@@ -76,8 +76,11 @@
     'contain',
   ]
 %}
-<article{{ attributes.addClass(classes) }}>
+{% if not node.hasField('field_spread') or node.field_spread.value == '0' %}
+  {% set classes = classes|merge(['container']) %}
+{% endif %}
 
+<article{{ attributes.addClass(classes) }}>
   {{ title_prefix }}
   {% if not page %}
     <h2{{ title_attributes }}>
