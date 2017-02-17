@@ -5,7 +5,7 @@
 
 			if ($('.node--type-book')) {
 			  $(window).resize(function(ev) {
-			    if ($(window).width() > 1300) {
+			    if ($(window).width() > 1400) {
 			    	$('.comic-garden-tall-wrapper').show();
 			    } else {
 			    	$('.comic-garden-tall-wrapper').hide();			    	
@@ -13,7 +13,6 @@
 			  });
 			}
 			$(window).trigger('resize');
-      // Header Tweaks
       // Header Tweaks
       $(window).scroll(function () {
         var scr = $(this).scrollTop();
