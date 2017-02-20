@@ -753,9 +753,6 @@ body .content {
 footer.node__meta {
     display: none;
 }
-body .header-main .menu li a:hover {
-  color: $natbg;
-}
 .front .node--type-book > h2 {
   display: none;
 }
@@ -786,7 +783,4 @@ body .header-main .menu li a:hover {
 }
 .comic-garden-tall-wrapper .ComicGarden.sticky {
 	opacity: 1;
-}
-.header-main > .contain {
-	text-align: center;
 }

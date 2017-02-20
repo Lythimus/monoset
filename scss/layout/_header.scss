@@ -92,6 +92,9 @@ div[class$="branding"] {
   &:last-child {
     margin: 0;
   }
+  & > .contain {
+	  text-align: center;
+  }
   a {
     display: inline-block;
     @include font-size(17px);
@@ -99,7 +102,7 @@ div[class$="branding"] {
     text-transform: uppercase;
     color: $grey-500;
     &:hover {
-      color: $blue;
+      color: $natbg;
     }
   }
 }

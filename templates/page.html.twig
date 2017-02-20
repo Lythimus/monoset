@@ -8,12 +8,14 @@
  <header class="header-main">
   <div class="menu-btn open" aria-hidden="true">&#9776; Menu</div>
   <div class="contain">
-    <a class="logo" href="{{ front_page }}" title="{{ site_name }} » {{ site_slogan }}">
-      <img src="/sites/default/files/webassets/Nattosoup-Logo-No-Background.gif" class="site-logo" />
-    </a>
-    {% if page.nav %}
-      {{ page.nav }}
-    {% endif %}
+    <div class="col-sm-12">
+			<a class="logo" href="{{ front_page }}" title="{{ site_name }} » {{ site_slogan }}">
+				<img src="/sites/default/files/webassets/Nattosoup-Logo-No-Background.gif" class="site-logo" />
+			</a>
+			{% if page.nav %}
+				{{ page.nav }}
+			{% endif %}
+		</div>
   </div>
 </header>
 
