@@ -132,7 +132,7 @@ body {
 .purchase-kara .col {
   margin-top: 1em;
 }
-#block-aboutbeccahillburn {
+#block-aboutbeccahillburn, #block-aboutbeccahillburn-2 {
     position: relative;
     width: 100%;
     text-align: center;
@@ -151,18 +151,20 @@ body {
     width: 120%;
     margin-left: -10%;
   }
-  #block-aboutbeccahillburn .container {
-    padding-top: 30%;
-    margin-bottom: -10%;
-  }
-  #block-aboutbeccahillburn span, #block-aboutbeccahillburn h1 {
-    background-color: rgba(73,69,66,0.6);
-  }
+  #block-aboutbeccahillburn, #block-aboutbeccahillburn-2 {
+    & .container {
+			padding-top: 30%;
+			margin-bottom: -10%;
+		}
+    & span, & h1 {
+			background-color: rgba(73,69,66,0.6);
+		}
+		& .tweet-bubble {
+			display: none;
+		}
+	}
   .block-color h2 span {
     margin: 0 -50%;
-  }
-  #block-aboutbeccahillburn .tweet-bubble {
-    display: none;
   }
 }
 .block-color h1, .block-color h2, .block-color h3, .block-color p {
@@ -205,56 +207,59 @@ footer .fa:hover {
 #beccaHillburnTweet .user, #beccaHillburnTweet .timePosted, #beccaHillburnTweet .interact {
   display: none;
 }
-#block-aboutbeccahillburn .fa-comment {
-  color: rgba(73,69,66,0.8);
-}
-#block-aboutbeccahillburn .fa-comment {
-  font-size: 340px;
-  margin-top: -230px;
-}
-#block-aboutbeccahillburn h1 {
-  color: #9bd59b;
-}
-#block-aboutbeccahillburn .bigtext-line0, #block-aboutbeccahillburn .bigtext-line1, #block-aboutbeccahillburn .bigtext-line2, #block-aboutbeccahillburn .bigtext-line4 {
-  line-height: 70%;
-}
-#block-aboutbeccahillburn .bigtext-line0, #block-aboutbeccahillburn .bigtext-line1 {
-	&, span {
-	  font-family: $header-font;
+#block-aboutbeccahillburn, #block-aboutbeccahillburn-2 {
+  & .fa-comment {
+  	color: rgba(73,69,66,0.8);
+		font-size: 340px;
+		margin-top: -230px;
+	}
+	& h1 {
+  	color: #9bd59b;
+	}
+	& .bigtext-line0, & .bigtext-line1, & .bigtext-line2, & .bigtext-line4 {
+		line-height: 70%;
+	}
+	& .bigtext-line0, & .bigtext-line1 {
+		&, span {
+			font-family: $header-font;
+		}
 	}
 }
 .tweet-bubble {
   position: relative;
 }
 .tweet-bubble #beccaHillburnTweet {
-  position: absolute;
-  top:0;
-  left: 0;
-  width: 80%;
-  margin-top: -140px;
-  margin-left: 34px;
-  height: 160px;
-  display: inline-block;
-  border-radius: 50%;
-  text-align: center;
-}
-.tweet-bubble #beccaHillburnTweet:before {
-  content: '';
-  display: inline-block;
-  /*height:100%; COMEHERE */
-  vertical-align: middle;
-}
-.tweet-bubble #beccaHillburnTweet p.tweet {
-  vertical-align: middle;
-  display: inline-block;
+  & {
+		position: absolute;
+		top:0;
+		left: 0;
+		width: 80%;
+		margin-top: -140px;
+		margin-left: 34px;
+		height: 160px;
+		display: inline-block;
+		border-radius: 50%;
+		text-align: center;
+	}
+	&:before {
+		content: '';
+		display: inline-block;
+		/*height:100%; COMEHERE */
+		vertical-align: middle;
+	}
+	& p.tweet {
+		vertical-align: middle;
+		display: inline-block;
+	}
 }
 
-#block-buykara-2 p {
-  text-align: justify;
-  text-justify: inter-word;
-}
-#block-buykara-2 h2, footer h2 {
-	&, span {
+#block-buykara, #block-buykara-2 {
+  & p {
+		text-align: justify;
+		text-justify: inter-word;
+	}
+#block-buykara, #block-buykara-2, footer {
+	& h2, & span {
 	  font-family: $header-font;
   }
 }
@@ -706,19 +711,21 @@ footer .region-footer {
 #block-social-networks-footer-block {
 		padding-bottom: 4em;
 }
-#block-credentials .text-muted {
+#block-credentials, #block-credentials-2
+  & .text-muted {
 		margin-bottom: 1em;
 		text-align: left;
-}
-#block-credentials .text-muted:last-child {
-		margin-bottom: 32px;
+  }
+	.text-muted:last-child {
+			margin-bottom: 32px;
+	}
 }
 
 body .content {
 	padding-bottom: 0;
 }
 .region-front-one, body.node--type-book .region-content {
-  background: url(https://nattosoup.com/sites/default/files/webassets/Site-Background-V1.jpg) repeat-y;
+  background: url(/sites/default/files/webassets/Site-Background-V1.jpg) repeat-y;
 }
 .node--type-book [aria-labelledby="book-label-1"] ul {
 		list-style-type: none;

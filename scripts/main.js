@@ -3,16 +3,18 @@
   Drupal.behaviors.customTweaks = {
     attach: function (context, settings) {
 
-			if ($('.node--type-book')) {
-			  $(window).resize(function(ev) {
-			    if ($(window).width() > 1400) {
-			    	$('.comic-garden-tall-wrapper').show();
-			    } else {
-			    	$('.comic-garden-tall-wrapper').hide();			    	
-			    }
-			  });
-			}
-			$(window).trigger('resize');
+      /*
+      if ($('.node--type-book')) {
+        $(window).resize(function(ev) {
+          if ($(window).width() > 1400) {
+            $('.comic-garden-tall-wrapper').show();
+          } else {
+            $('.comic-garden-tall-wrapper').hide();           
+          }
+        });
+      }
+      */
+      $(window).trigger('resize');
       // Header Tweaks
       $(window).scroll(function () {
         var scr = $(this).scrollTop();
@@ -22,12 +24,12 @@
         else {
           $('.header-main').removeClass("sticky");
         }
-        if (scr < jQuery('article.node--type-book, .region-front-one').offset().top + jQuery('article.node--type-book, .region-front-one').outerHeight()) {
-          $('.comic-garden-tall-wrapper .ComicGarden').addClass("sticky");
-        }
-        else {
-          $('.comic-garden-tall-wrapper .ComicGarden').removeClass("sticky");
-        }
+        //if (scr < jQuery('article.node--type-book, .region-front-one').offset().top + jQuery('article.node--type-book, .region-front-one').outerHeight()) {
+        //  $('.comic-garden-tall-wrapper .ComicGarden').addClass("sticky");
+        //}
+        //else {
+        //  $('.comic-garden-tall-wrapper .ComicGarden').removeClass("sticky");
+        //}
       });
 
       // Smooth Scroll to Anchor Links
@@ -67,21 +69,21 @@
       // Trigger the injection
       SVGInjector(mySVGsToInject, injectorOptions, function (totalSVGsInjected) {});
 
-			$('footer .request-headline').bigtext({
-					childSelector: 'div'
-			});
+      $('footer .request-headline').bigtext({
+          childSelector: 'div'
+      });
 
-			// Fit Text Plugin for Main Header
-			$("h1").fitText(
-					1.2, {
-							minFontSize: '35px',
-							maxFontSize: '65px'
-					}
-			);
+      // Fit Text Plugin for Main Header
+      $("h1").fitText(
+          1.2, {
+              minFontSize: '35px',
+              maxFontSize: '65px'
+          }
+      );
 
-			$('#block-buykara h2, #block-aboutbeccahillburn .becca-intro, #block-letmeknowwhatyouthinkofkara h2').bigtext({
-					childSelector: 'span'
-			});
+      $('#block-buykara h2, #block-aboutbeccahillburn .becca-intro, #block-letmeknowwhatyouthinkofkara h2, #block-buykara-2 h2, #block-aboutbeccahillburn-2 .becca-intro').bigtext({
+          childSelector: 'span'
+      });
 
     }
   };
