@@ -131,6 +131,12 @@ body {
 }
 .purchase-kara .col {
   margin-top: 1em;
+  & .btn {
+		width: 100%;
+	}
+}
+@include breakpoint(md) .purchase-kara .btn {
+	width: auto;
 }
 #block-aboutbeccahillburn, #block-aboutbeccahillburn-2 {
     position: relative;
@@ -152,6 +158,7 @@ body {
     margin-left: -10%;
   }
   #block-aboutbeccahillburn, #block-aboutbeccahillburn-2 {
+    overflow: hidden;
     & .container {
       padding-top: 30%;
       margin-bottom: -10%;
@@ -773,13 +780,16 @@ footer.node__meta {
 .ink-drop-cafe-wide .RotatorScript {
   display: block;
 }
-.ink-drop-cafe-wide-wrapper .RotatorScript img {
-  width: auto;
-}
 .ink-drop-cafe-tall-wrapper {
   display: none;
 }
-.ink-drop-cafe-tall-wrapper .RotatorScript {
+.ink-drop-cafe-wide-wrapper .RotatorScript a {
+  width: 100%;
+	&:first-child {
+	  display: none;
+	}
+}
+@include breakpoint(lg) .ink-drop-cafe-tall-wrapper .RotatorScript {
   opacity: 0;
   position: fixed;
   bottom: 0.5em;
@@ -788,6 +798,11 @@ footer.node__meta {
   -moz-transition: all .35s;
   transition: all .35s;
 }
+@include breakpoint(lg) .ink-drop-cafe-wide-wrapper .RotatorScript a {
+	width: auto;
+	display: block;
+}
+
 .ink-drop-cafe-tall-wrapper .RotatorScript.sticky {
   opacity: 1;
 }
