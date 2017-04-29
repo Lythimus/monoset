@@ -766,20 +766,20 @@ footer.node__meta {
 .site-logo {
   height: 48px;
 }
-.comic-garden-wide {
+.ink-drop-cafe-wide {
   margin: 0 auto;
   text-align: center;
 }
-.comic-garden-wide .ComicGarden {
+.ink-drop-cafe-wide .RotatorScript {
   display: block;
 }
-.comic-garden-wide-wrapper .ComicGarden img {
+.ink-drop-cafe-wide-wrapper .RotatorScript img {
   width: auto;
 }
-.comic-garden-tall-wrapper {
+.ink-drop-cafe-tall-wrapper {
   display: none;
 }
-.comic-garden-tall-wrapper .ComicGarden {
+.ink-drop-cafe-tall-wrapper .RotatorScript {
   opacity: 0;
   position: fixed;
   bottom: 0.5em;
@@ -788,7 +788,7 @@ footer.node__meta {
   -moz-transition: all .35s;
   transition: all .35s;
 }
-.comic-garden-tall-wrapper .ComicGarden.sticky {
+.ink-drop-cafe-tall-wrapper .RotatorScript.sticky {
   opacity: 1;
 }
 .circular {
@@ -815,4 +815,19 @@ footer.node__meta {
 }
 .footer-main .region-footer {
   margin: 0 auto;
+}
+
+.slick--vertical .slick-dots {
+	postiion: absolute;
+	& li {
+	  width: 100px;
+		height: 100px;
+		border-radius: 50px;
+		-webkit-border-radius: 50px;
+		-moz-border-radius: 50px;
+		background: url(http://link-to-your/image.jpg) no-repeat;
+		box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+		-webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+		-moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+  }
 }
