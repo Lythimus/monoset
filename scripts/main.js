@@ -3,17 +3,15 @@
   Drupal.behaviors.customTweaks = {
     attach: function (context, settings) {
 
-      /*
       if ($('.node--type-book')) {
         $(window).resize(function(ev) {
           if ($(window).width() > 1400) {
-            $('.comic-garden-tall-wrapper').show();
+            $('.ink-drop-cafe-tall-wrapper').show();
           } else {
-            $('.comic-garden-tall-wrapper').hide();           
+            $('.ink-drop-cafe-tall-wrapper').hide();           
           }
         });
       }
-      */
       $(window).trigger('resize');
       // Header Tweaks
       $(window).scroll(function () {
@@ -24,12 +22,12 @@
         else {
           $('.header-main').removeClass("sticky");
         }
-        //if (scr < jQuery('article.node--type-book, .region-front-one').offset().top + jQuery('article.node--type-book, .region-front-one').outerHeight()) {
-        //  $('.comic-garden-tall-wrapper .ComicGarden').addClass("sticky");
-        //}
-        //else {
-        //  $('.comic-garden-tall-wrapper .ComicGarden').removeClass("sticky");
-        //}
+        if (scr < jQuery('article.node--type-book, .region-front-one').offset().top + jQuery('article.node--type-book, .region-front-one').outerHeight()) {
+          $('.ink-drop-cafe-tall-wrapper .RotatorScript').addClass("sticky");
+        }
+        else {
+          $('.ink-drop-cafe-tall-wrapper .RotatorScript').removeClass("sticky");
+        }
       });
 
       // Smooth Scroll to Anchor Links
