@@ -158,7 +158,6 @@ body {
     margin-left: -10%;
   }
   #block-aboutbeccahillburn, #block-aboutbeccahillburn-2 {
-    overflow: hidden;
     & .container {
       padding-top: 30%;
       margin-bottom: -10%;
@@ -215,6 +214,7 @@ footer .fa:hover {
   display: none;
 }
 #block-aboutbeccahillburn, #block-aboutbeccahillburn-2 {
+	overflow: hidden;
   & .fa-comment {
     color: rgba(73,69,66,0.8);
     font-size: 340px;
