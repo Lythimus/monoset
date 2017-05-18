@@ -165,7 +165,7 @@ body {
   }
   & .bigtext-line0, & .bigtext-line1 {
     &, span {
-      font-family: $header-font;
+     font-family: $header-font;
     }
   }
 }
@@ -761,6 +761,9 @@ body .content {
 }
 .node--type-book .node__content img {
     width: 100%;
+}
+.node--type-book .ink-drop-cafe-wide img {
+    width: auto;
 }
 footer.node__meta {
     display: none;
