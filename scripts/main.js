@@ -22,7 +22,7 @@
         else {
           $('.header-main').removeClass("sticky");
         }
-        if (scr < jQuery('article.node--type-book, .region-front-one').offset().top + jQuery('article.node--type-book, .region-front-one').outerHeight()) {
+        if ($('article.node--type-book, .region-front-one').length && scr < $('article.node--type-book, .region-front-one').offset().top + $('article.node--type-book, .region-front-one').outerHeight()) {
           $('.ink-drop-cafe-tall-wrapper .RotatorScript').addClass("sticky");
         }
         else {
@@ -83,6 +83,10 @@
           childSelector: 'span'
       });
 
+      $('.lines-button').on('click', function(ev) {
+          $('.product-description-wrapper').toggleClass('disable-description');
+          $(this).toggleClass('close');
+      });
     }
   };
 })(jQuery, Drupal);
