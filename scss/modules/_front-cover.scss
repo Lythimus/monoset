@@ -886,6 +886,9 @@ footer.node__meta {
 				filter: blur(7px);
 			}
     }
+    & img.media__element {
+      width: 100%;
+    }
   }
 	& .disable-description {
 	    &.product-description-wrapper {
