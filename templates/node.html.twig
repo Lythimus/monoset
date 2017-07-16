@@ -100,35 +100,37 @@
   {% endif %}
 
   <div{{ content_attributes.addClass('node__content') }}>
-			{% if node.bundle == 'product' %}
-			  <div class="product-container">
-					<div class="slick-row">
-						{{ content.uc_product_image }}
-					</div>
-			  </div>
-				{% if node.body.summary %}
-				<div class="product-description-wrapper">
-					<div class="product-description">
-						<h2{{ title_attributes }}>{{ label }}</h2>
-						<div class="price">{{ content.price }}</div>
-						<div class="product-body">{% if node.body.summary %}{{ node.body.summary }}{% else %}{{ content.body }}{% endif %}</div>
-						<div class="dimensions">{{ content.dimensions }}</div>
-						<div class="add-to-cart">{{ content.add_to_cart }}</div>
-					</div>
-					<button type="button" role="button" aria-label="Toggle description" class="lines-button x close">
-						<span class="lines"></span>
-					</button>
-				</div>
-				<div class="block-color product-details clearfix">
-					<div class="col-lg-8 col-lg-offset-2 text-center">
-						{{ content.body }}
-					</div>
-				</div>
-				{% endif %}
-			{% else %}
-		    {{ content|without('links') }}
-			{% endif %}
-			</div>
+      {% if node.bundle == 'product' %}
+        <div class="product-container">
+          <div class="slick-row">
+            {{ content.uc_product_image }}
+          </div>
+        </div>
+        {% if node.body.summary %}
+        <div class="product-description-wrapper">
+          <div class="product-description">
+            <h2{{ title_attributes }}>{{ label }}</h2>
+            <div class="price">{{ content.price }}</div>
+            <div class="product-body">{% if node.body.summary %}{{ node.body.summary }}{% else %}{{ content.body }}{% endif %}</div>
+            <div class="dimensions">{{ content.dimensions }}</div>
+            <div class="add-to-cart">{{ content.add_to_cart }}</div>
+          </div>
+          <button type="button" role="button" aria-label="Toggle description" class="lines-button x close">
+            <span class="lines"></span>
+          </button>
+        </div>
+        <div class="contain">
+          <div class="block-color product-details clearfix">
+            <div class="col-lg-8 col-lg-offset-2 text-center">
+              {{ content.body }}
+            </div>
+          </div>
+        </div>
+        {% endif %}
+      {% else %}
+        {{ content|without('links') }}
+      {% endif %}
+      </div>
   </div>
 
   {% if content.links %}
