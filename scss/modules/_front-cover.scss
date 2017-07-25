@@ -1018,3 +1018,21 @@ footer.node__meta {
         }
     }
 }
+.product-overview {
+	& .blazy--grid {
+    padding: 1em;
+		background: $natlight;
+		& .grid__content {
+			background: $natbg;
+			& .product-description {
+				padding: 0.5em 1em 1em 1em;
+				background: $natbg;
+				color: $natdark;
+			}
+			& img {
+				width: 100%;
+				height: auto;
+			}
+		}
+	}
+}
