@@ -28,6 +28,7 @@ vendor:
   css:
     theme:
       styles/vendor/animate.css: { weight: -2 }
+      styles/vendor/mouseparallax.css: { weight: -1 }
   js:
     scripts/vendor/jquery.fittext.js: { scope: footer , weight: -11 }
     scripts/vendor/bigtext.js: { scope: footer , weight: -10 }
@@ -36,6 +37,7 @@ vendor:
     scripts/vendor/svg-injector.min.js: { scope: footer , weight: -7 }
     scripts/vendor/prism.js: { scope: footer , weight: -6 }
     scripts/vendor/wow.min.js: { scope: footer, weight: -5 }
+    scripts/vendor/mouse.parallax.js: { scope: footer, weight: -4 }
 
 # Front Page Library
 front-page:

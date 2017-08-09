@@ -12,6 +12,15 @@
           }
         });
       }
+
+      $('.lines-button').on('click', function(ev) {
+      		console.log(ev);
+          $('.product-description-wrapper').toggleClass('disable-description');
+          $(this).toggleClass('close');
+      });
+      
+      // $('.views-field-uc-product-image').mouseParallax({ moveFactor: 5 });
+
       $(window).trigger('resize');
       // Header Tweaks
       $(window).scroll(function () {
@@ -81,11 +90,6 @@
 
       $('#block-buykara h2, #block-aboutbeccahillburn .becca-intro, #block-letmeknowwhatyouthinkofkara h2, #block-buykara-2 h2, #block-aboutbeccahillburn-2 .becca-intro').bigtext({
           childSelector: 'span'
-      });
-
-      $('.lines-button').on('click', function(ev) {
-          $('.product-description-wrapper').toggleClass('disable-description');
-          $(this).toggleClass('close');
       });
     }
   };
