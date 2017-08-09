@@ -148,9 +148,7 @@ gulp.task('styleguide:generate', function() {
         // customColors: '/scss/utils/_styleguide_custom_variables.scss',
         // For static style guide. Generat relative to your environment:
         // appRoot: '/themes/monoset/styleguide',
-        extraHead: [
-          '<link href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700|Merriweather:400,400italic,700,700italic|Slackey">',
-        ],
+        extraHead: [],
         rootPath: outputPath,
         disableEncapsulation: true,
         // disableHtml5Mode: true
