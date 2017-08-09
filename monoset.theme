@@ -40,21 +40,3 @@ function monoset_preprocess_block(&$variables) {
 	}
   //if (isset($variables['elements']['content']['#name']) && $variables['elements']['content']['#name'] == 'projects_front') {
 }
-
-/**
- * Implements hook_css_alter().
- */
-function monoset_css_alter(&$css) {
-  $theme_path = drupal_get_path('theme', 'monoset');
-  $googlefonts = 'https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700|Merriweather:400,400italic,700,700italic';
-  $css[$googlefonts] = array(
-		'data' => $googlefonts,
-		'type' => 'external',
-		'every_page' => TRUE,
-		'media' => 'all',
-		'preprocess' => FALSE,
-		'group' => CSS_AGGREGATE_THEME,
-		'browsers' => array('IE' => TRUE, '!IE' => TRUE),
-		'weight' => -1,
-	);
-}
