@@ -1021,19 +1021,19 @@ footer.node__meta {
     background: $natlight;
     & .grid__content {
       background: $natbg;
-			-webkit-transition: all 0.6s ease; /* Safari and Chrome */
-			-moz-transition: all 0.6s ease; /* Firefox */
-			-ms-transition: all 0.6s ease; /* IE 9 */
-			-o-transition: all 0.6s ease; /* Opera */
-			transition: all 0.6s ease;
+      -webkit-transition: all 0.6s ease; /* Safari and Chrome */
+      -moz-transition: all 0.6s ease; /* Firefox */
+      -ms-transition: all 0.6s ease; /* IE 9 */
+      -o-transition: all 0.6s ease; /* Opera */
+      transition: all 0.6s ease;
       &:hover {
-      	background: $natalt;
-      	color: $natlight;
-      	& .product-description {
-      		background: $natalt;
-					color: $natlight;
-					font-weight: bold;
-				}
+        background: $natalt;
+        color: $natlight;
+        & .product-description {
+          background: $natalt;
+          color: $natlight;
+          font-weight: bold;
+        }
       }
       & .product-description {
         padding: 0.5em 1em 1em 1em;
@@ -1060,5 +1060,56 @@ footer.node__meta {
         }
       }
     }
+  }
+}
+.path-comic .content .views-element-container {
+  background-color: #FFEEDB;
+}
+.kara-archive {
+  ul {
+    list-style-type: none;
+  }
+  & > ul {
+    margin-left: -3%;
+  }
+  .depth-3 a {
+    font-size: 125%;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    color: #2EC4B6 !important;
+  }
+  .views-field-field-page img {
+    margin-bottom: 1.5em;
+  }
+  & > ul > li {
+    vertical-align: top;
+  }
+  .views-field-field-page img {
+    width: 100%;
+    height: auto;
+  }
+}
+@include breakpoint(sm) {
+  .kara-archive > ul {
+    margin-left: -5%;
+  }
+  .kara-archive > ul > li {
+    display: inline-block;
+    width: 45%;
+    min-height: 1000px;
+    margin-left: 5%;
+  }
+}
+@include breakpoint(md) {
+  .kara-archive > ul {
+    margin-left: -3%;
+  }
+  .kara-archive > ul > li {
+    display: inline-block;
+    width: 30%;
+    min-height: 1000px;
+    margin-left: 3%;
+    vertical-align: top;
   }
 }
