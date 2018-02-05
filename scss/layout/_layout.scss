@@ -8,10 +8,6 @@
   @include clearfix;
   margin: 0 auto;
   padding: 0 1rem;
-  @include breakpoint(md) {
-    width: 970px;
-    padding: 0;
-  }
 
   @include breakpoint(lg) {
     width: 1170px;

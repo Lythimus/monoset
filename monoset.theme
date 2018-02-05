@@ -8,6 +8,7 @@
 use Drupal\Component\Utility\Xss;
 use Drupal\Component\Utility\SafeMarkup;
 use Drupal\Core\Form\FormStateInterface;
+// use Drupal\Core\Url;
 
 /**
  * Implements hook_preprocess_page().
@@ -36,7 +37,21 @@ function monoset_theme_suggestions_block_alter(array &$suggestions, array $varia
  */
 function monoset_preprocess_block(&$variables) {
   if (isset($variables['elements']['content']['#block_content']) && property_exists($variables['elements']['content']['#block_content'], 'field_hero_image')) {
-	  $variables['block_content'] = $variables['elements']['content']['#block_content']->get('field_hero_image');
-	}
+    $variables['block_content'] = $variables['elements']['content']['#block_content']->get('field_hero_image');
+  }
   //if (isset($variables['elements']['content']['#name']) && $variables['elements']['content']['#name'] == 'projects_front') {
 }
+
+/**
+ * Implements hook_preprocess_menu().
+ *
+function monoset_preprocess_menu(&$variables) {
+  if ($variables['menu_name'] == 'main') {
+		$cart = \Drupal::service('uc_cart.manager')->get();
+		//kint(count($cart->getContents()));
+		$variables['cart_count'] = count($cart->getContents());
+	  $variables['cart_url'] = Url::fromRoute('uc_cart.cart');
+  }
+}
+*/
+
