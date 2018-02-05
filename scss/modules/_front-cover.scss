@@ -1090,7 +1090,7 @@ footer.node__meta {
     height: auto;
   }
 }
-@include breakpoint(sm) {
+@include breakpoint(md) {
   .kara-archive > ul {
     margin-left: -5%;
   }
@@ -1101,7 +1101,7 @@ footer.node__meta {
     margin-left: 5%;
   }
 }
-@include breakpoint(md) {
+@include breakpoint(lg) {
   .kara-archive > ul {
     margin-left: -3%;
   }
