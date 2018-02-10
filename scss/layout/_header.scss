@@ -120,7 +120,8 @@ div[class$="branding"] {
       left: inherit;
       top: inherit;
       margin-left: 2em;
-      visibility: visible;
+      visibility: visible !important;
+      display: block !important;
     }
   }
   a {
