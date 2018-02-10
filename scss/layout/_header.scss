@@ -16,20 +16,24 @@
     background: $white;
   }
   // Front Page Header Tweaks
-  > .path-frontpage & {
+  & > .path-frontpage & {
     border: none;
     background: none;
     transition: all .5s ease-in-out;
-    .menu li a {
+    .menu li a, .nice-menu li a {
       color: $grey-600;
     }
   }
   &.sticky {
     background: rgba($white, 0.9);
     box-shadow: 0 2px 5px rgba($black, 0.25);
-    .menu li a {
+    & .menu li a, & .nice-menu li a {
       color: $grey-500;
     }
+  }
+  body & ul.nice-menu li, body & ul.nice-menu li:hover {
+    border: 0;
+		background-color: transparent;
   }
 }
 
@@ -76,7 +80,7 @@ div[class$="branding"] {
   display: inline;
 }
 
-.header-main .menu {
+.header-main .menu, .header-main .nice-menu {
   display: none;
   float: initial;
   @include breakpoint(md) {
@@ -86,7 +90,7 @@ div[class$="branding"] {
   }
 }
 
-.header-main .menu li {
+.header-main .menu li, .header-main .nice-menu li {
   display: inline;
   margin: 0  1.5rem 0 0;
   &:last-child {
