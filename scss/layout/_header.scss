@@ -110,3 +110,26 @@ div[class$="branding"] {
     }
   }
 }
+.offcanvas.pushy-open ul.nice-menu {
+  li {
+    border: 0;
+    width: 100%;
+    background: #000;
+    ul {
+      position: static;
+      left: inherit;
+      top: inherit;
+      margin-left: 2em;
+      visibility: visible;
+    }
+  }
+  a {
+    display: block;
+    padding: 1rem;
+    border-bottom: 1px solid #000;
+    background-color: rgb(33, 33, 33);
+    color: #bdbdbd; 
+    width: 100%;
+    min-height: 4em;
+  }
+}
