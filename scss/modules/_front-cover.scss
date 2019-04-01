@@ -1063,7 +1063,7 @@ footer.node__meta {
   }
 }
 .path-comic .content .views-element-container {
-  background-color: #FFEEDB;
+  background-color: $natlight;
 }
 .kara-archive {
   ul {
@@ -1113,3 +1113,7 @@ footer.node__meta {
     vertical-align: top;
   }
 }
+.light-bg {
+  background-color: $natlight;
+}
+

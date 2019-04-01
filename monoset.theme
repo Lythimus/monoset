@@ -18,8 +18,38 @@ function monoset_preprocess_page(&$variables) {
   if ($variables['is_front']) {
     $variables['#attached']['library'][] = 'monoset/front-page';
   }
+  // Don't index articles and youtube videos
+  if (isset($variables['node']) && ($variables['node']->type == 'art_education_video' || $variables['node']->type == 'article')) {
+    drupal_add_html_head_link(array(
+        '#tag' => 'meta',
+        '#type' => 'html_tag',
+        '#attributes' => array(
+          'name' => 'robots',
+          'content' => 'noindex'
+        )
+      )
+    );
+  }
 }
 
+/**
+function monoset_html_head_alter(&$head_elements) {
+  $node = $variables['node'];
+  if ($node->type == 'sometype') {
+  if (arg(0) == 'node' && arg(1) == 'YOUR NODE NID' && !arg(2)) {
+    $head_elements['MYMODULE_meta_robots'] = array(
+      '#tag' => 'meta',
+      '#type' => 'html_tag',
+      '#attributes' => array(
+        'name' => 'robots',
+        'content' => 'noindex'
+      )
+    );
+  }
+}
+function monoset_preprocess_html(&$variables) {
+}
+*/
 
 /**
  * Implements hook_theme_suggestions_HOOK_alter() for form templates.
