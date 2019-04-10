@@ -91,6 +91,13 @@
       $('#block-buykara h2, #block-aboutbeccahillburn .becca-intro, #block-letmeknowwhatyouthinkofkara h2, #block-buykara-2 h2, #block-aboutbeccahillburn-2 .becca-intro, h2.bigtext').bigtext({
           childSelector: 'span'
       });
+
+      // Fix Rotator images breaking when caching through CloudFlare
+      $('.RotatorScript').ready(function() {
+        if ($('.RotatorScript:contains(undefined)').html()) {
+          $('.RotatorScript:contains(undefined)').html(jQuery('.RotatorScript:contains(undefined)').html().replace(/undefined/, '<a href="https://inkdropcafe.com"><img src="https://scripts.inkdropcafe.com/rotator/images/160x274/IDCwhite.png" alt="Ink Drop Cafe" title="Ink Drop Cafe"></a>'));
+        }
+      });
     }
   };
 })(jQuery, Drupal);

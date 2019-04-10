@@ -1116,4 +1116,24 @@ footer.node__meta {
 .light-bg {
   background-color: $natlight;
 }
+.block-views-block-blog-preview-blog-preview .views-field-nothing, .block-views-block-7-kara-preview-kara-preview .views-field-field-page {
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+}
+.block-views-block-blog-preview-blog-preview .views-field-nothing .field-content > p {
+  padding: 1em 0 0 0;
+}
+.block-views-block-blog-preview-blog-preview, .block-views-block-7-kara-preview-kara-preview, .block-views-block-youtube-preview-youtube-preview {
+  .views-row {
+    padding: 1em;
+    background-color: #fff;
+  }
+}
+.block-views-block-7-kara-preview-kara-preview h4 {
+  text-align: center;
+}
 
