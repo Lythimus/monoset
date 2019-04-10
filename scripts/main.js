@@ -94,7 +94,9 @@
 
       // Fix Rotator images breaking when caching through CloudFlare
       $('.RotatorScript').ready(function() {
-        $('.RotatorScript:contains(undefined)').html(jQuery('.RotatorScript:contains(undefined)').html().replace(/undefined/, '<a href="https://inkdropcafe.com"><img src="https://scripts.inkdropcafe.com/rotator/images/160x274/IDCwhite.png" alt="Ink Drop Cafe" title="Ink Drop Cafe"></a>'));
+        if ($('.RotatorScript:contains(undefined)').html()) {
+          $('.RotatorScript:contains(undefined)').html(jQuery('.RotatorScript:contains(undefined)').html().replace(/undefined/, '<a href="https://inkdropcafe.com"><img src="https://scripts.inkdropcafe.com/rotator/images/160x274/IDCwhite.png" alt="Ink Drop Cafe" title="Ink Drop Cafe"></a>'));
+        }
       });
     }
   };
