@@ -88,7 +88,7 @@
           }
       );
 
-      $('#block-buykara h2, #block-aboutbeccahillburn .becca-intro, #block-letmeknowwhatyouthinkofkara h2, #block-buykara-2 h2, #block-aboutbeccahillburn-2 .becca-intro, h2.bigtext').bigtext({
+      $('#block-buykara h2, #block-aboutbeccahillburn .becca-intro, #block-letmeknowwhatyouthinkofkara h2, #block-buykara-2 h2, #block-aboutbeccahillburn-2 .becca-intro, h2.bigtext, h3.bigtext, h4.bigtext, h5.bigtext').bigtext({
           childSelector: 'span'
       });
 
