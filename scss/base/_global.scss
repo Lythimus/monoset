@@ -18,8 +18,8 @@ html {
 }
 
 ::selection {
-  background: $blue;
-  color: $white;
+  background: $natalt;
+  color: $natlight;
 }
 
 .region-content-top {
@@ -31,9 +31,13 @@ html {
 }
 
 .node__content input[type="submit"] {
-    background-color: $natalt;
-    &:hover {
-    		background-color: $nataccent;
-    		font-weight: bold;
-    }
+  background-color: $natalt;
+  &:hover {
+    background-color: $nataccent;
+    font-weight: bold;
+  }
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus, select:focus, textarea:focus {
+  border-color: $nataccent;
 }

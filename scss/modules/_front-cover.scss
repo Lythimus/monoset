@@ -1150,4 +1150,33 @@ footer.node__meta {
     height: 100%;
   }
 }
+#uc-cart-view-form #edit-continue-shopping {
+  margin-left: 0;
+}
+#uc-cart-view-form td, #uc-cart-view-form th {
+  padding: 0.5em;
+}
+.uc-store-address-field .form-item label {
+  text-align: left;
+}
+.path-cart {
+  summary[role=button] {
+    text-align: center;
+    border-bottom: 1px dotted $natbg;
+  }
+  .uc-cart-view-form .contain > div {
+    background-color: $natlight;
+  }
+  .page-content {
+    .contain, .region-content {
+      background-color: inherit;
+    }
+    background-color: $natbg;
+  }
+  details {
+    background-color: $natlight;
+    margin-top: 1em;
+    padding: 1em;
+  }
+}
 

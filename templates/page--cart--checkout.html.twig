@@ -1,0 +1,81 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a single Drupal page.
+ */
+ #}
+
+ <header class="header-main">
+  <div class="menu-btn open" aria-hidden="true">&#9776; Menu</div>
+  <div class="contain">
+    <div class="col-sm-12 col-xs-2 col-xs-offset-5 col-sm-offset-0">
+			<a class="logo" href="{{ front_page }}" title="{{ site_name }} » {{ site_slogan }}">
+				<img src="/sites/default/files/webassets/Nattosoup-Logo-No-Background.gif" class="site-logo" />
+			</a>
+			{% if page.nav %}
+				{{ page.nav }}
+			{% endif %}
+		</div>
+  </div>
+</header>
+
+<div class="offcanvas pushy pushy-left">
+  <div class="menu-btn close" aria-hidden="true">&#10005; Menu</div>
+  {% if page.nav %}
+    {{ page.nav }}
+  {% endif %}
+</div>
+
+<!-- Site Overlay -->
+<div class="site-overlay"></div>
+
+<div id="container" class="container-main">
+    <div class="content">
+      <div class="page-content">
+        <div class="visually-hidden contain"><a id="main-content" tabindex="-1"></a></div>
+        {{ messages }}
+        {% if page.help %}
+          <div class="help contain">
+            {{ page.help }}
+          </div>
+        {% endif %}
+        {% if action_links %}
+          <ul class="action-links">
+            {{ action_links }}
+          </ul>
+        {% endif %}
+
+        {% if secondary_local_tasks %}
+          <div class="tabs-secondary clearfix" role="navigation">{{ secondary_local_tasks }}</div>
+        {% endif %}
+
+        {{ title_prefix }}
+        {% if title %}
+          <h1 class="page-title">{{ title }}</h1>
+        {% endif %}
+        {{ title_suffix }}
+        {% if primary_local_tasks %}
+          {{ primary_local_tasks }}
+        {% endif %}
+
+        {% if page.content_top %}
+          {{ page.content_top }}
+        {% endif %}
+        <div class="contain">
+          <div class="col-md-8 col-md-offset-2">
+            {{ page.content }}
+          </div>
+        </div>
+
+        {% if page.content_bottom %}
+          {{ page.content_bottom }}
+        {% endif %}
+    </div>
+  </div>
+</div>
+<footer class="footer-main bg-primary">
+	{% if page.footer %}
+		{{ page.footer }}
+	{% endif %}
+</footer>
+

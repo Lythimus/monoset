@@ -98,6 +98,22 @@
           $('.RotatorScript:contains(undefined)').html(jQuery('.RotatorScript:contains(undefined)').html().replace(/undefined/, '<a href="https://inkdropcafe.com"><img src="https://scripts.inkdropcafe.com/rotator/images/160x274/IDCwhite.png" alt="Ink Drop Cafe" title="Ink Drop Cafe"></a>'));
         }
       });
+
+      // Ajaxify add to cart and shopping cart flyout
+      /*
+      $('.uc-product-add-to-cart-form .form-actions input').on('click', function(e) {
+        e.preventDefault();
+        var form = $(e.currentTarget).parents('form');
+        $.ajax({
+          url: window.location.pathname,
+          type: form.attr('method'),
+          data: form.serialize()
+        });
+        if ($('.offcanvas.pushy.pushy-left').length) {
+          $('.dialog-off-canvas-main-canvas .menu-btn.open').trigger('click')
+        }
+      });
+      */
     }
   };
 })(jQuery, Drupal);
