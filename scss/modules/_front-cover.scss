@@ -1185,3 +1185,15 @@ footer.node__meta {
     background-color: $natbg;
   }
 }
+.order-review-table .pane-title-row {
+  background-color: $natlight;
+  border: 0;
+}
+.order-review-table {
+  border: 0;
+}
+.order-review-table .review-button-row {
+  background-color: inherit;
+  border: 0;
+}
+
