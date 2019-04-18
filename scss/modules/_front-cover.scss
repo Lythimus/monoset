@@ -1179,4 +1179,9 @@ footer.node__meta {
     padding: 1em;
   }
 }
-
+.path-user .content {
+  background-color: $natlight;
+  .contain > div {
+    background-color: $natbg;
+  }
+}
