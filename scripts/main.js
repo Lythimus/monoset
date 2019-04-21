@@ -99,6 +99,16 @@
         }
       });
 
+      var resizeProductDescription = function(event) {
+        console.log('aoeu');
+        var productImageHeightMax = $('.slick-wrapper').height() - 78 - ($('.add-to-cart').height() * 2 || 0) - ($('.product-description h2').height() || 0) - ($('.product-description .price').height() || 0) - ($('.product-description .dimenions').height() || 0);
+        console.log(productImageHeightMax);
+        $('.product-description .product-body').css('max-height', productImageHeightMax);
+      };
+      if ($('.node--type-product'))
+        $(window).on('resize', resizeProductDescription);
+      $('.slick-wrapper').on('afterChange', resizeProductDescription).trigger('afterChange');
+
       // Ajaxify add to cart and shopping cart flyout
       /*
       $('.uc-product-add-to-cart-form .form-actions input').on('click', function(e) {
