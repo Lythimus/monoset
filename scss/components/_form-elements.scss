@@ -31,7 +31,7 @@ textarea {
   font-weight: $thin;
 }
 
-input[type="submit"] {
+input[type="submit"], a.button {
   display: block;
   border: none;
   background-color: $natalt;
@@ -47,6 +47,7 @@ input[type="submit"] {
   @include font-size(14px);
   letter-spacing: 1px;
   transition: all 0.3s;
+  text-align: center;
 }
 
 input[type="text"]:focus,
