@@ -106,7 +106,7 @@
             {{ content.uc_product_image }}
           </div>
         </div>
-        {% if node.body.summary %}
+        {% if node.hasField('field_summary') and content.field_summary %}
         <div class="product-description-wrapper">
           <div class="product-description">
             <h2{{ title_attributes }}>{{ label }}</h2>
