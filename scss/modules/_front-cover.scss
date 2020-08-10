@@ -869,6 +869,9 @@ footer.node__meta {
 }
 .node--type-product {
   width: 100%;
+  & .node__content {
+    position: relative;
+  }
   & article.contain {
     padding: 0;
   }
