@@ -867,6 +867,12 @@ footer.node__meta {
   max-width: 200px;
   object-fit: contain;
 }
+.node--type-article article {
+  background-color: $natlight;
+  .title-content h2 {
+    padding: 1em 0;
+  }
+}
 .node--type-product {
   width: 100%;
   & .node__content {
