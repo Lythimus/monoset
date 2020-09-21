@@ -869,7 +869,9 @@ footer.node__meta {
 }
 .node--type-article article {
   background-color: $natlight;
-  padding: 3em;
+  .title-content h2 {
+    padding: 1em 0;
+  }
 }
 .node--type-product {
   width: 100%;
