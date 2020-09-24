@@ -1230,4 +1230,7 @@ footer.node__meta {
   background-color: inherit;
   border: 0;
 }
+.visually-hidden [role="alert"] {
+  display: none;
+}
 
