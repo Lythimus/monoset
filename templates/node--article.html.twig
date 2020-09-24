@@ -81,14 +81,6 @@
 {% endif %}
 
 <article{{ attributes.addClass(classes) }}>
-  {{ title_prefix }}
-  {% if not page %}
-    <h2{{ title_attributes }}>
-      <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-    </h2>
-  {% endif %}
-  {{ title_suffix }}
-
   {% if display_submitted %}
     <footer class="node__meta">
       {{ author_picture }}
@@ -102,7 +94,17 @@
   <div{{ content_attributes.addClass('node__content') }}>
     <div class="contain">
       <div class="col-sm-10 col-sm-offset-1 text-center title-content">
-        <h2{{ title_attributes }}>{{ label }}</h2>
+        {{ title_prefix }}
+        {% if not page %}
+          <h2{{ title_attributes }}>
+            <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+          </h2>
+        {% else %}
+          <h2{{ title_attributes }}>
+            {{ label }}
+          </h2>
+        {% endif %}
+        {{ title_suffix }}
       </div>
       <div class="block-color product-details clearfix">
         <div class="col-lg-8 col-lg-offset-2 text-center body-content">
