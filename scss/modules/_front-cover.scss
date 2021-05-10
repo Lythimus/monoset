@@ -66,6 +66,11 @@
   }
 }
 
+.contact-block-section {
+  padding: 2em 0;
+  background-color: $natlight;
+}
+
 #block-7karaheroimage {
   background-size: cover;
   background-position: center;
@@ -167,6 +172,9 @@ body {
     &, span {
      font-family: $header-font;
     }
+  }
+  & .bigtext-line2, & .bigtext-line3, & .bigtext-line4 {
+    display: block;
   }
 }
 @media(max-width:767px) {

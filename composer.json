@@ -12,5 +12,7 @@
         }
     ],
     "minimum-stability": "dev",
-    "require": {}
+    "require": {
+        "drush/drush": "10.x-dev"
+    }
 }
