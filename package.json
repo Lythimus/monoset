@@ -14,24 +14,30 @@
       "url": "http://opensource.org/licenses/MIT"
     }
   ],
+  "//": [
+    "nvm use v11"
+  ],
   "devDependencies": {
     "browser-sync": "^2.26.12",
-    "es6-promise": "^3.3.1",
-    "gulp": "^3.9.1",
+    "es6-promise": "^4.1.1",
+    "gulp": "3.9.1",
     "gulp-autoprefixer": "^3.1.0",
-    "gulp-beautify": "^2.0.0",
-    "gulp-imagemin": "^3.0.1",
-    "gulp-jshint": "^2.0.0",
-    "gulp-load-plugins": "^1.0.0",
-    "gulp-notify": "^2.2.0",
-    "gulp-sass": "^2.3.2",
+    "gulp-beautify": "^2.0.1",
+    "gulp-imagemin": "^3.3.1",
+    "gulp-jshint": "^2.0.4",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-notify": "^3.0.0",
+    "gulp-sass": "^3.1.0",
     "gulp-shell": "^0.8.0",
-    "gulp-sourcemaps": "^1.6.0",
-    "gulp-uglify": "^1.5.1",
-    "jshint-stylish": "^2.1.0",
-    "sc5-styleguide": "^1.0.0"
+    "gulp-sourcemaps": "^2.6.0",
+    "gulp-uglify": "^3.0.0",
+    "jshint-stylish": "^2.2.1",
+    "sc5-styleguide": "^2.0.3"
   },
-  "dependencies": {
-    "node-sass": "^4.14.1"
+  "resolutions": {
+    "graceful-fs": "^4.2.4"
+  },
+  "scripts": {
+    "preinstall": "npx npm-force-resolutions"
   }
 }
