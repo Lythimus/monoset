@@ -177,6 +177,11 @@ body {
     display: block;
   }
 }
+.contact-slogan {
+  & .bigtext-line0, & .bigtext-line1, & .bigtext-line2 {
+    font-family: Merriweather,"helvetica neue",Arial,sans-serif;
+  }
+}
 @media(max-width:767px) {
   .kara-title .title-ribbon {
     width: 120%;
