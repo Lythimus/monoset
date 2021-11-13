@@ -1247,4 +1247,9 @@ footer.node__meta {
 .visually-hidden [role="alert"] {
   display: none;
 }
+.blazy--field-media-image,
+.media--bundle--image .media--blazy .media--image {
+  width: fit-content;
+  height: auto;
+}
 
