@@ -1247,6 +1247,10 @@ footer.node__meta {
 .visually-hidden [role="alert"] {
   display: none;
 }
+.views-field-field-media-image img {
+  width: 100%;
+  height: auto;
+}
 .blazy--field-media-image,
 .media--bundle--image .media--blazy .media--image {
   width: fit-content;
