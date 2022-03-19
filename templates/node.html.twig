@@ -100,7 +100,7 @@
   {% endif %}
 
   <div{{ content_attributes.addClass('node__content') }}>
-      {% if node.bundle == 'product' %}
+      {% if node.bundle == 'product' or node.bundle == 'product_kit' %}
         <div class="product-container">
           <div class="slick-row">
             {{ content.uc_product_image }}
