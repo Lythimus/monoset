@@ -1273,4 +1273,18 @@ footer.node__meta {
 #block-teachingartist {
   padding-bottom: 1em;
 }
+.hero-block-static {
+  position: relative;
+  & > img {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  & > .container {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
 
