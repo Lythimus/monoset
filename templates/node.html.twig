@@ -101,19 +101,18 @@
 
   <div{{ content_attributes.addClass('node__content') }}>
       {% if node.bundle == 'product' or node.bundle == 'product_kit' %}
-        <div class="product-container">
+        <div class="product-container {{ node.bundle }}">
           <div class="slick-row">
-            {{ content.uc_product_image }}
+            {% if content.uc_product_image %}{{ content.uc_product_image }}{% endif %}
           </div>
         </div>
         {% if node.hasField('field_summary') and content.field_summary %}
         <div class="product-description-wrapper">
           <div class="product-description">
-            <h2{{ title_attributes }}>{{ label }}</h2>
+            <h2{% if title and title_attributes %}{{ title_attributes }}{% endif %}>{{ label }}</h2>
             <div class="price">{{ content.price }}</div>
             <div class="product-body">{% if content.field_summary %}{{ content.field_summary }}{% else %}{{ content.body }}{% endif %}</div>
             <div class="dimensions">{{ content.dimensions }}</div>
-            <div class="add-to-cart">{{ content.add_to_cart }}</div>
           </div>
           <button type="button" role="button" aria-label="Toggle description" class="lines-button x close">
             <span class="lines"></span>
