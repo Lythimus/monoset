@@ -4,10 +4,13 @@
 *
 **/
 
+@use "utils/variables";
+@use "utils/mixins";
+
 .featured {
-  background: $white url(../images/featured-bg.jpg) no-repeat 50% 0;
+  background: variables.$white url(../images/featured-bg.jpg) no-repeat 50% 0;
   background-size: cover;
-  @include breakpoint(md) {
+  @include mixins.breakpoint(md) {
     display: table;
     width: 100%;
     table-layout: fixed;
@@ -18,15 +21,15 @@
     position: relative;
     padding: 2rem 1rem;
     width: 100%;
-    border-bottom: 1px solid $grey-600;
+    border-bottom: 1px solid variables.$grey-600;
     &:last-child {
       border: none;
     }
-    @include breakpoint(md) {
+    @include mixins.breakpoint(md) {
       display: table-cell;
       width: 50%;
       padding: 3rem;
-      border-right: 1px solid $grey-600;
+      border-right: 1px solid variables.$grey-600;
       border-bottom: none;
     }
 
@@ -38,21 +41,21 @@
       z-index: -1;
       top: 0;
       left: 0;
-      background: rgba($black, 0.65);
+      background: rgba(variables.$black, 0.65);
       transition: all .3s;
     }
     &:hover:before {
-      background: rgba($black, 0.75);
+      background: rgba(variables.$black, 0.75);
     }
   }
   h2 {
-    @include font-size(34px);
+    @include mixins.font-size(34px);
     margin: 0 0 2rem 0;
     line-height: 1;
-    color: $white;
+    color: variables.$white;
   }
   p {
-    color: $white;
+    color: variables.$white;
     margin: 0 0 1rem 0;
   }
 }

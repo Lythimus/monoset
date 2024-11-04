@@ -4,6 +4,8 @@
 *
 **/
 
+@use "utils/variables";
+
 .footer-main {
   z-index: 100;
   text-align: center;
@@ -13,6 +15,6 @@
   .region-footer.container {
     padding: 0 0 2rem 0;
     width: 100%;
-    background: $natbg;
+    background: variables.$natbg;
   }
 }

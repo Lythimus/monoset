@@ -3,6 +3,8 @@
 * Global
 *
 **/
+@use "utils/functions";
+@use "utils/variables";
 
 html, body {
   height: 100%;
@@ -18,12 +20,12 @@ html {
 }
 
 ::selection {
-  background: $natalt;
-  color: $natlight;
+  background: variables.$natalt;
+  color: variables.$natlight;
 }
 
 .region-content-top {
-  background-color: $natbg;
+  background-color: variables.$natbg;
 }
 
 .header-main {
@@ -31,13 +33,13 @@ html {
 }
 
 .node__content input[type="submit"] {
-  background-color: $natalt;
+  background-color: variables.$natalt;
   &:hover {
-    background-color: $nataccent;
+    background-color: variables.$nataccent;
     font-weight: bold;
   }
 }
 
 input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus, select:focus, textarea:focus {
-  border-color: $nataccent;
+  border-color: variables.$nataccent;
 }

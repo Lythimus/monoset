@@ -5,12 +5,15 @@
 // markup:
 // <a href="#">Sample Link</a>
 
+@use "utils/variables";
+@use "sass:color";
+
 a {
-  color: $red;
+  color: variables.$red;
   transition: .5s;
   text-decoration: none;
   &:hover {
-    color: darken($red, 20);
+    color: color.adjust(variables.$red, $lightness: -20%);
   }
   &:visited {
     text-decoration: none;

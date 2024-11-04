@@ -5,38 +5,38 @@
 **/
 
 // Utils
-@import "utils/variables";
-@import "utils/functions";
-@import "utils/mixins";
+@use "utils/variables";
+@use "utils/functions";
+@use "utils/mixins";
 
 // Base
-@import "base/reset";
-@import "base/global";
-@import "base/typography";
-@import "base/bootstrap-grid12";
+@use "base/reset";
+@use "base/global";
+@use "base/typography";
+@use "base/bootstrap-grid12";
 
 // Components
-@import "components/links";
-@import "components/drupal-overrides";
-@import "components/form-elements.scss";
-@import "components/animations";
-@import "components/prism";
+@use "components/links";
+@use "components/drupal-overrides";
+@use "components/form-elements.scss";
+@use "components/animations";
+@use "components/prism";
 
 //  Layout
-@import "layout/layout";
-@import "layout/header";
-@import "layout/footer";
-@import "layout/offcanvas";
-@import "layout/front";
+@use "layout/layout";
+@use "layout/header";
+@use "layout/footer";
+@use "layout/offcanvas";
+@use "layout/front";
 
 // Modules
-@import "modules/front-cover";
-@import "modules/front-features";
-@import "modules/front-icons";
-@import "modules/front-posts";
-@import "modules/front-featured";
-@import "modules/front-news";
-@import "modules/front-source";
+@use "modules/front-cover";
+@use "modules/front-features";
+@use "modules/front-icons";
+@use "modules/front-posts";
+@use "modules/front-featured";
+@use "modules/front-news";
+@use "modules/front-source";
 
-@import "modules/blog";
-@import "modules/post";
+@use "modules/blog";
+@use "modules/post";

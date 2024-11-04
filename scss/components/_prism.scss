@@ -5,6 +5,8 @@
  * @author Lea Verou
  */
 
+@use "utils/variables";
+
 code[class*="language-"],
 pre[class*="language-"] {
   color: black;
@@ -53,7 +55,7 @@ pre[class*="language-"] {
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-  background: $grey-100;
+  background: variables.$grey-100;
 }
 
 /* Inline code */

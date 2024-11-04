@@ -10,6 +10,8 @@
 // <div class="form-item"><textarea rows="4" cols="50"></textarea></div>
 // <input type="submit" name="" value="Submit">
 
+@use "utils/variables";
+@use "utils/mixins";
 
 input[type="text"],
 input[type="email"],
@@ -17,34 +19,34 @@ input[type="password"],
 textarea {
   display: block;
   background: none;
-  border: 1px solid $grey-300;
-  background-color: $white;
+  border: 1px solid variables.$grey-300;
+  background-color: variables.$white;
   width: 100%;
   padding: 1rem;
   appearance: none;
   box-shadow: none;
   border-radius: none;
   transition: border 0.3s;
-  @include font-size(14px);
-  color: $natdark;
-  font-family: $fontDefault;
-  font-weight: $thin;
+  @include mixins.font-size(14px);
+  color: variables.$natdark;
+  font-family: variables.$fontDefault;
+  font-weight: variables.$thin;
 }
 
 input[type="submit"], a.button {
   display: block;
   border: none;
-  background-color: $natalt;
+  background-color: variables.$natalt;
   &:hover {
-    background-color: $nataccent;
+    background-color: variables.$nataccent;
     font-weight: bold;
   }
   width: 100%;
   padding: 1rem;
   margin: 0 0 1rem;
   cursor: pointer;
-  color: $white;
-  @include font-size(14px);
+  color: variables.$white;
+  @include mixins.font-size(14px);
   letter-spacing: 1px;
   transition: all 0.3s;
   text-align: center;
@@ -56,7 +58,7 @@ input[type="password"]:focus,
 select:focus,
 textarea:focus {
   outline: none;
-  border-color: $natalt;
+  border-color: variables.$natalt;
 }
 
 input:-webkit-autofill {
@@ -67,11 +69,11 @@ select {
   background: transparent;
   width: 100%;
   padding: 1rem;
-  border: 1px solid $grey-300;
+  border: 1px solid variables.$grey-300;
   border-radius: 0;
-  background-color: $white;
+  background-color: variables.$white;
   background: url(../icons/chevron-down.svg) no-repeat 99% 50%;
-  color: $natalt;
+  color: variables.$natalt;
   box-shadow: none;
   border-radius: none;
   transition: border 0.3s;

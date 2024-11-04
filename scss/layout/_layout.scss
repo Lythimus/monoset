@@ -4,12 +4,15 @@
 *
 **/
 
+@use "utils/mixins";
+@use "utils/variables";
+
 .contain {
-  @include clearfix;
+  @include mixins.clearfix;
   margin: 0 auto;
   padding: 0 1rem;
 
-  @include breakpoint(lg) {
+  @include mixins.breakpoint(lg) {
     width: 1170px;
   }
 }
@@ -20,7 +23,7 @@
 .content {
   padding: 2rem 1rem 0 1rem;
   min-height: 750px;
-  @include breakpoint(md) {
+  @include mixins.breakpoint(md) {
     padding: 5rem 0 2rem 0;
     animation: fadeIn ease-in 1;
     animation-fill-mode: forwards;
@@ -33,7 +36,7 @@
 }
 
 .region-content {
-  background-color: $natbg;
+  background-color: variables.$natbg;
   padding-bottom: 2rem;
 }
 

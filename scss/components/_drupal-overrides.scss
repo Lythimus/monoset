@@ -4,9 +4,12 @@
 *
 **/
 
+@use "utils/mixins";
+@use "utils/variables";
+
 .header-main {
   top: 0;
-  @include breakpoint(md) {
+  @include mixins.breakpoint(md) {
     .toolbar-fixed & {
       top: 39px;
     }
@@ -21,8 +24,8 @@
 .messages {
   padding: 1rem;
   margin: 0 0 2rem;
-  border: 1px solid $grey-200;
+  border: 1px solid variables.$grey-200;
   &.messages--status {
-    border-color: $blue;
+    border-color: variables.$blue;
   }
 }

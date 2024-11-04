@@ -1,43 +1,28 @@
 {
   "name": "nattosoup-monoset",
-  "version": "1.0.2",
+  "version": "1.0.5",
   "description": "Nattosoup Drupal 8 Theme",
-  "author": "Joseph Coco < josephcoco@protonmail.ch and Andrei Zvonkov < zvonkov@gmail.com>",
-  "homepage": "http://nattosoup.com",
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:Lythimus/monoset.git"
-  },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "http://opensource.org/licenses/MIT"
-    }
-  ],
-  "//": [
-    "nvm use v11"
-  ],
-  "devDependencies": {
-    "browser-sync": "^2.26.12",
-    "es6-promise": "^4.1.1",
-    "gulp": "3.9.1",
-    "gulp-autoprefixer": "^3.1.0",
-    "gulp-beautify": "^2.0.1",
-    "gulp-imagemin": "^3.3.1",
-    "gulp-jshint": "^2.0.4",
-    "gulp-load-plugins": "^1.5.0",
-    "gulp-notify": "^3.0.0",
-    "gulp-sass": "^3.1.0",
-    "gulp-shell": "^0.8.0",
-    "gulp-sourcemaps": "^2.6.0",
-    "gulp-uglify": "^3.0.0",
-    "jshint-stylish": "^2.2.1",
-    "sc5-styleguide": "^2.0.3"
-  },
-  "resolutions": {
-    "graceful-fs": "^4.2.4"
+  "engines": {
+    "node": ">=14.0.0"
   },
   "scripts": {
-    "preinstall": "npx npm-force-resolutions"
+    "start": "gulp",
+    "build": "gulp build"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.29.3",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-dart-sass": "^1.1.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-load-plugins": "^2.0.8",
+    "gulp-notify": "^4.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
+    "sass": "^1.62.1"
+  },
+  "dependencies": {
+    "breakpoint-sass": "^3.0.0"
   }
 }

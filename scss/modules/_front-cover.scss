@@ -1,11 +1,15 @@
 // Front Cover
+@use "utils/variables";
+@use "utils/mixins";
+
+@use "sass:math";
 
 .cover {
   .cover-title {
     text-align: center;
     margin: 40% 0 0 0;
     .no-touchevents & {
-      @include breakpoint(md) {
+      @include mixins.breakpoint(md) {
         position: fixed;
         top: 40%;
         left: 50%;
@@ -19,7 +23,7 @@
     margin: -14px 0 -11px -4px;
     width: 32px;
     height: 32px;
-    fill: $grey-100;
+    fill: variables.$grey-100;
     display: inline-block;
     animation: pulsate 2s linear infinite;
     opacity: 1;
@@ -68,7 +72,7 @@
 
 .contact-block-section {
   padding: 2em 0;
-  background-color: $natlight;
+  background-color: variables.$natlight;
 }
 
 #block-7karaheroimage {
@@ -140,8 +144,10 @@ body {
     width: 100%;
   }
 }
-@include breakpoint(md) .purchase-kara .btn {
-  width: auto;
+@include mixins.breakpoint(md) {
+  .purchase-kara .btn {
+    width: auto;
+  }
 }
 #block-aboutbeccahillburn, #block-aboutbeccahillburn-2 {
   overflow: hidden;
@@ -170,7 +176,7 @@ body {
   }
   & .bigtext-line0, & .bigtext-line1 {
     &, span {
-     font-family: $header-font;
+     font-family: variables.$header-font;
     }
   }
   & .bigtext-line2, & .bigtext-line3, & .bigtext-line4 {
@@ -281,7 +287,7 @@ footer .fa:hover {
   }
 #block-buykara, #block-buykara-2, footer {
   & h2, & span {
-    font-family: $header-font;
+    font-family: variables.$header-font;
   }
 }
 .between {
@@ -350,7 +356,7 @@ footer .fa:hover {
   animation: blurIn 1.5s;
   display: flex;
   .no-touchevents & {
-    @include breakpoint(md) {
+    @include mixins.breakpoint(md) {
       background-attachment: fixed;
     }
   }
@@ -810,18 +816,22 @@ footer.node__meta {
     }
   }
 }
-@include breakpoint(lg) .ink-drop-cafe-tall-wrapper .RotatorScript {
-  opacity: 0;
-  position: fixed;
-  bottom: 0.5em;
-  right: 0.5em;
-  -webkit-transition: all .35s;
-  -moz-transition: all .35s;
-  transition: all .35s;
+@include mixins.breakpoint(lg) {
+  .ink-drop-cafe-tall-wrapper .RotatorScript {
+    opacity: 0;
+    position: fixed;
+    bottom: 0.5em;
+    right: 0.5em;
+    -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    transition: all .35s;
+  }
 }
-@include breakpoint(lg) .ink-drop-cafe-wide-wrapper .RotatorScript a {
-  width: auto;
-  display: block;
+@include mixins.breakpoint(lg) {
+  .ink-drop-cafe-wide-wrapper .RotatorScript a {
+    width: auto;
+    display: block;
+  }
 }
 
 .ink-drop-cafe-tall-wrapper .RotatorScript.sticky {
@@ -884,7 +894,7 @@ footer.node__meta {
   object-fit: contain;
 }
 .node--type-article article {
-  background-color: $natlight;
+  background-color: variables.$natlight;
   .title-content h2 {
     padding: 1em 0;
   }
@@ -898,10 +908,10 @@ footer.node__meta {
     padding: 0;
   }
   & .block-color.product-details {
-    background-color: $natbg;
-    color: $natfg;
+    background-color: variables.$natbg;
+    color: variables.$natfg;
     & .col-lg-8 {
-      background-color: $natlight;
+      background-color: variables.$natlight;
       padding: 3em;
       margin-top: -4em;
     }
@@ -941,7 +951,7 @@ footer.node__meta {
   }
   & .product-description-wrapper {
     display: none;
-    background-color: $natlight;
+    background-color: variables.$natlight;
     & .product-description {
       padding: 2.5%;
       z-index: 2;
@@ -954,7 +964,7 @@ footer.node__meta {
       }
       & .price {
           font-size: 2em;
-          color: $natdark;
+          color: variables.$natdark;
       }
     }
     & .add-to-cart {
@@ -985,7 +995,7 @@ footer.node__meta {
   }
 }
 .slick .slick-dots--thumbnail-grid li:hover img, .slick .slick-dots--thumbnail-grid li.slick-active img {
-    border-color: $natalt;
+    border-color: variables.$natalt;
 }
 
 .lines-button {
@@ -1015,10 +1025,10 @@ footer.node__meta {
     }
     @mixin line {
       display: inline-block;
-      width: $closeButtonSize;
-      height: $closeButtonSize/7;
-      background: $natalt;
-      border-radius: $closeButtonSize/14; 
+      width: variables.$closeButtonSize;
+      height: math.div(variables.$closeButtonSize, 7);
+      background: variables.$natalt;
+      border-radius: math.div(variables.$closeButtonSize, 14); 
       transition: .3s;
     }
     & .lines {
@@ -1029,22 +1039,22 @@ footer.node__meta {
           position: absolute;
           left:0;
           content: '';
-          -webkit-transform-origin: $closeButtonSize/14 center;
-                  transform-origin: $closeButtonSize/14 center;
+          -webkit-transform-origin: math.div(variables.$closeButtonSize, 14) center;
+                  transform-origin: math.div(variables.$closeButtonSize, 14) center;
         }
         &:before { 
-          top: $closeButtonSize/4; 
+          top: math.div(variables.$closeButtonSize, 4); 
         }
         &:after { 
-          top: -$closeButtonSize/4; 
+          top: -(math.div(variables.$closeButtonSize, 4)); 
         }
     }
     &:hover .lines {
         &:before { 
-          top: $closeButtonSize/3.5;
+          top: math.div(variables.$closeButtonSize, 3.5);
         }
         &:after { 
-          top: -$closeButtonSize/3.5;
+          top: -(math.div(variables.$closeButtonSize, 3.5));
         }
     }
     &.x.close .lines {
@@ -1053,7 +1063,7 @@ footer.node__meta {
           -webkit-transform-origin: 50% 50%;
                   transform-origin: 50% 50%;
           top:0;
-          width: $closeButtonSize;
+          width: variables.$closeButtonSize;
         }
         &:before{
           -webkit-transform: rotate3d(0,0,1,45deg); 
@@ -1068,27 +1078,27 @@ footer.node__meta {
 .product-overview {
   & .blazy--grid {
     padding: 1em;
-    background: $natlight;
+    background: variables.$natlight;
     & .grid__content {
-      background: $natbg;
+      background: variables.$natbg;
       -webkit-transition: all 0.6s ease; /* Safari and Chrome */
       -moz-transition: all 0.6s ease; /* Firefox */
       -ms-transition: all 0.6s ease; /* IE 9 */
       -o-transition: all 0.6s ease; /* Opera */
       transition: all 0.6s ease;
       &:hover {
-        background: $natalt;
-        color: $natlight;
+        background: variables.$natalt;
+        color: variables.$natlight;
         & .product-description {
-          background: $natalt;
-          color: $natlight;
+          background: variables.$natalt;
+          color: variables.$natlight;
           font-weight: bold;
         }
       }
       & .product-description {
         padding: 0.5em 1em 1em 1em;
-        background: $natbg;
-        color: $natdark;
+        background: variables.$natbg;
+        color: variables.$natdark;
       }
       & .views-field-uc-product-image {
         overflow: hidden;
@@ -1113,7 +1123,7 @@ footer.node__meta {
   }
 }
 .path-comic .content .views-element-container {
-  background-color: $natlight;
+  background-color: variables.$natlight;
 }
 .kara-archive {
   ul {
@@ -1140,7 +1150,7 @@ footer.node__meta {
     height: auto;
   }
 }
-@include breakpoint(md) {
+@include mixins.breakpoint(md) {
   .kara-archive > ul {
     margin-left: -5%;
   }
@@ -1151,7 +1161,7 @@ footer.node__meta {
     margin-left: 5%;
   }
 }
-@include breakpoint(lg) {
+@include mixins.breakpoint(lg) {
   .kara-archive > ul {
     margin-left: -3%;
   }
@@ -1164,7 +1174,7 @@ footer.node__meta {
   }
 }
 .light-bg {
-  background-color: $natlight;
+  background-color: variables.$natlight;
 }
 .block-views-block-blog-preview-blog-preview .views-field-nothing, .block-views-block-7-kara-preview-kara-preview .views-field-field-page {
   img {
@@ -1212,31 +1222,31 @@ footer.node__meta {
 .path-cart {
   summary[role=button] {
     text-align: center;
-    border-bottom: 1px dotted $natbg;
+    border-bottom: 1px dotted variables.$natbg;
   }
   .uc-cart-view-form .contain > div {
-    background-color: $natlight;
+    background-color: variables.$natlight;
   }
   .page-content {
     .contain, .region-content {
       background-color: inherit;
     }
-    background-color: $natbg;
+    background-color: variables.$natbg;
   }
   details {
-    background-color: $natlight;
+    background-color: variables.$natlight;
     margin-top: 1em;
     padding: 1em;
   }
 }
 .path-user .content {
-  background-color: $natlight;
+  background-color: variables.$natlight;
   .contain > div {
-    background-color: $natbg;
+    background-color: variables.$natbg;
   }
 }
 .order-review-table .pane-title-row {
-  background-color: $natlight;
+  background-color: variables.$natlight;
   border: 0;
 }
 .order-review-table {
@@ -1305,6 +1315,9 @@ footer.node__meta {
   width: 100%;
   height: auto;
 }
+#block-teacherorartist .about-selectors {
+  overflow: hidden;
+}
 #block-teacherorartist a img {
   width: 100%;
   height: auto;
@@ -1322,3 +1335,56 @@ footer.node__meta {
   }
 }
 
+#block-views-block-shop-catalog-menu-block-1 {
+  display: flex;
+  justify-content: space-around;
+  background-color: #FFEEDB;
+  padding: 10px;
+  border-bottom: 2px solid #DB3B04;
+}
+
+/* Style for inactive buttons */
+#block-views-block-shop-catalog-menu-block-1 .views-row a.inactive {
+  background-color: #DB3B04;
+  opacity: 0.7;
+  border: default;
+}
+
+#block-views-block-shop-catalog-menu-block-1 .views-row a.inactive:hover {
+  opacity: 1;
+}
+
+#block-views-block-shop-catalog-menu-block-1 .views-row {
+  list-style: none;
+  display: inline-block;
+}
+
+#block-views-block-shop-catalog-menu-block-1 .views-row a {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 0 5px;
+  text-decoration: none;
+  font-size: 16px;
+  color: #FFEEDB;
+  background-color: #2EC4B6;
+  border-radius: 5px;
+  border: 1px solid #2EC4B6;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+#block-views-block-shop-catalog-menu-block-1 .views-row a:hover,
+#block-views-block-shop-catalog-menu-block-1 .views-row a:focus {
+  background-color: #29335C;
+  border-color: #29335C;
+}
+
+@media (max-width: 768px) {
+  #block-views-block-shop-catalog-menu-block-1 {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  #block-views-block-shop-catalog-menu-block-1 .views-row {
+      margin-bottom: 10px;
+  }
+}

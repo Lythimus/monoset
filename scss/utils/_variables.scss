@@ -1,3 +1,14 @@
+// Fonts
+$fontDefault: Merriweather,'Helvetica Neue',Arial,sans-serif;
+$fontHighlight: Georgia, Times, "Times New Roman", serif;
+
+$thin: 100;
+$light: 300;
+$normal: 400;
+$medium: 500;
+$bold: 700;
+$ultra-bold: 900;
+
 // Colors
 //
 // Color Variables
@@ -6,8 +17,8 @@
 
 // Highlight Colors
 //
-// $blue - 2ba9e0;
-// $red - ff5027;
+// variables.$blue - 2ba9e0;
+// variables.$red - ff5027;
 //
 // markup:
 // <div style="background: {$modifiers};" class="styleguide-color">{$modifiers}</div>
@@ -19,16 +30,16 @@ $red: #ff5027;
 
 // Greys 
 //
-// $grey-50 - fafafa; 
-// $grey-100 - f5f5f5;
-// $grey-200 - eeeeee;
-// $grey-300 - e0e0e0;
-// $grey-400 - bdbdbd;
-// $grey-500 - 9e9e9e;
-// $grey-600 - 757575;
-// $grey-700 - 616161;
-// $grey-800 - 424242;
-// $grey-900 - 212121;
+// variables.$grey-50 - fafafa; 
+// variables.$grey-100 - f5f5f5;
+// variables.$grey-200 - eeeeee;
+// variables.$grey-300 - e0e0e0;
+// variables.$grey-400 - bdbdbd;
+// variables.$grey-500 - 9e9e9e;
+// variables.$grey-600 - 757575;
+// variables.$grey-700 - 616161;
+// variables.$grey-800 - 424242;
+// variables.$grey-900 - 212121;
 //
 // markup:
 // <div style="background: {$modifiers};" class="styleguide-color">{$modifiers}</div>

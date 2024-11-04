@@ -4,9 +4,12 @@
 *
 **/
 
+@use "utils/variables";
+@use "utils/mixins";
+
 .posts {
-  background: $white;
-  border-bottom: 1px solid $grey-200;
+  background: variables.$white;
+  border-bottom: 1px solid variables.$grey-200;
   display: table;
   table-layout: fixed;
   width: 100%;
@@ -14,12 +17,12 @@
   .views-row {
     transition: all .3s;
     padding: 2rem 1rem;
-    border-bottom: 1px solid $grey-200;
-    @include breakpoint(md) {
+    border-bottom: 1px solid variables.$grey-200;
+    @include mixins.breakpoint(md) {
       display: table-cell;
       width: 33.333333%;
       padding: 3rem;
-      border-right: 1px solid $grey-200;
+      border-right: 1px solid variables.$grey-200;
       border-bottom: none;
     }
 
@@ -27,30 +30,30 @@
       border: none;
     }
     &:hover {
-      background: $blue;
+      background: variables.$blue;
     }
     &:hover .date,
     &:hover p a,
     &:hover h2 a {
-      color: $white;
+      color: variables.$white;
     }
   }
   .date {
-    font-family: $fontHighlight;
+    font-family: variables.$fontHighlight;
     font-style: italic;
-    @include font-size(14px);
+    @include mixins.font-size(14px);
     margin: 0 0 1rem 0;
-    color: $black;
+    color: variables.$black;
   }
   h2 {
-    @include font-size(30px);
+    @include mixins.font-size(30px);
     margin: 0 0 2rem 0;
     line-height: 1;
     a {
-      color: $black;
+      color: variables.$black;
     }
   }
   p a {
-    color: $grey-700;
+    color: variables.$grey-700;
   }
 }

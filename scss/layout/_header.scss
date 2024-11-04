@@ -4,16 +4,19 @@
 *
 **/
 
+@use "utils/variables";
+@use "utils/mixins";
+
 .header-main {
   position: relative;
   min-height: 3.8rem;
-  border-bottom: solid 1px $grey-200;
-  @include breakpoint(md) {
+  border-bottom: solid 1px variables.$grey-200;
+  @include mixins.breakpoint(md) {
     position: fixed;
     z-index: 100;
     width: 100%;
     padding: 1rem 0;
-    background: $white;
+    background: variables.$white;
   }
   // Front Page Header Tweaks
   & > .path-frontpage & {
@@ -21,14 +24,14 @@
     background: none;
     transition: all .5s ease-in-out;
     .menu li a, .nice-menu li a {
-      color: $grey-600;
+      color: variables.$grey-600;
     }
   }
   &.sticky {
-    background: rgba($white, 0.9);
-    box-shadow: 0 2px 5px rgba($black, 0.25);
+    background: rgba(variables.$white, 0.9);
+    box-shadow: 0 2px 5px rgba(variables.$black, 0.25);
     & .menu li a, & .nice-menu li a {
-      color: $grey-500;
+      color: variables.$grey-500;
     }
   }
   body & ul.nice-menu li, body & ul.nice-menu li:hover {
@@ -38,17 +41,17 @@
 }
 
 .logo-svg {
-  fill: $grey-500;
+  fill: variables.$grey-500;
   transition: all .3s;
   &:hover {
-    fill: $blue;
+    fill: variables.$blue;
   }
 }
 
 div[class$="branding"] {
   display: block;
   text-align: center;
-  @include breakpoint(md) {
+  @include mixins.breakpoint(md) {
     text-align: initial;
     display: inline-block;
   }
@@ -56,7 +59,7 @@ div[class$="branding"] {
 
 .site-logo {
   float: initial;
-  @include breakpoint(md) {
+  @include mixins.breakpoint(md) {
     float: left;
   }
 }
@@ -64,7 +67,7 @@ div[class$="branding"] {
 .site-name,
 .site-slogan {
   display: none;
-  @include breakpoint(md) {
+  @include mixins.breakpoint(md) {
     display: table;
     padding: 1rem 0 0 1rem;
     float: right;
@@ -83,7 +86,7 @@ div[class$="branding"] {
 .header-main .menu, .header-main .nice-menu {
   display: none;
   float: initial;
-  @include breakpoint(md) {
+  @include mixins.breakpoint(md) {
     display: block;
     margin: 3px 0 0 1.5rem;
     float: right;
@@ -101,12 +104,12 @@ div[class$="branding"] {
   }
   a {
     display: inline-block;
-    @include font-size(17px);
-    font-weight: $medium;
+    @include mixins.font-size(17px);
+    font-weight: variables.$medium;
     text-transform: uppercase;
-    color: $grey-500;
+    color: variables.$grey-500;
     &:hover {
-      color: $natbg;
+      color: variables.$natbg;
     }
   }
 }

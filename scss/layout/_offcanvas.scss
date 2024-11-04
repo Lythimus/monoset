@@ -4,6 +4,9 @@
 *
 **/
 
+@use "utils/variables";
+@use "utils/mixins";
+
 .menu-btn {
   position: absolute;
   top: 0;
@@ -18,7 +21,7 @@
   text-decoration: none;
   text-indent: -300px;
   cursor: pointer;
-  @include breakpoint(md) {
+  @include mixins.breakpoint(md) {
     display: none;
   }
 
@@ -28,7 +31,7 @@
 }
 
 .menu-btn:before {
-  color: $black;
+  color: variables.$black;
   font: normal 28px/55px "responsivenav";
   text-transform: none;
   text-align: center;
@@ -42,13 +45,13 @@
 }
 
 .menu-btn.open:hover:before {
-  color: $grey-900;
+  color: variables.$grey-900;
 }
 
 .menu-btn.close:before {
   font-size: 24px;
   content: "\78";
-  color: $white;
+  color: variables.$white;
 }
 
 .pushy {
@@ -57,7 +60,7 @@
   height: 100%;
   top: 0;
   z-index: 9999;
-  background: $black;
+  background: variables.$black;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
 }
@@ -110,10 +113,10 @@
   a {
     display: block;
     padding: 1rem;
-    border-bottom: 1px solid $grey-900;
-    color: $grey-400;
+    border-bottom: 1px solid variables.$grey-900;
+    color: variables.$grey-400;
     &:hover {
-      color: $white;
+      color: variables.$white;
     }
   }
 }

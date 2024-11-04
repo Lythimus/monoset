@@ -4,20 +4,23 @@
 *
 **/
 
+@use "utils/variables";
+@use "utils/mixins";
+
 .icons {
-  background: $grey-50;
-  border-bottom: 1px solid $grey-200;
+  background: variables.$grey-50;
+  border-bottom: 1px solid variables.$grey-200;
   text-align: center;
   padding: 3rem 0;
-  @include breakpoint(md) {
+  @include mixins.breakpoint(md) {
     padding: 5rem 0;
   }
 
   h2 {
-    @include font-size(40px);
+    @include mixins.font-size(40px);
     margin: 0 0 3rem 0;
-    @include breakpoint(md) {
-      @include font-size(50px);
+    @include mixins.breakpoint(md) {
+      @include mixins.font-size(50px);
       margin: 0 0 4rem 0;
     }
   }
@@ -28,17 +31,17 @@
     display: inline-block;
     padding: 3rem;
     margin: 0 1rem 1rem 0;
-    border: 1px solid $grey-200;
-    background: $white;
+    border: 1px solid variables.$grey-200;
+    background: variables.$white;
     &:hover .icon {
-      fill: $blue;
+      fill: variables.$blue;
     }
   }
   .icon {
     width: 32px;
     height: 32px;
     display: inline-block;
-    fill: $grey-600;
+    fill: variables.$grey-600;
     transition: all .3s;
   }
 }
