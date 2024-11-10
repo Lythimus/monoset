@@ -3,3 +3,14 @@ node_modules
 .sass-cache/
 !icons
 .DS_Store
+# Ignore source maps
+*.map
+# Or more specifically
+*.js.map
+*.css.map
+*.swp
+*.swl
+*.swm
+*.swn
+*.swo
+*.swp

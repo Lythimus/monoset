@@ -33,8 +33,11 @@
 
 // Mixin that will include the fall back px declaration as well as the calculated rem value.
 @mixin font-size($size) {
-  font-size: $size;
-  font-size: calculateRem($size);
+  font-size: calculateRem($size); // Move this declaration above the nested rule
+
+  & {
+    font-size: $size;
+  }
 }
 
 @mixin vertical-align {

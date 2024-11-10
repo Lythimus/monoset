@@ -33,6 +33,10 @@ function scripts() {
   return src('scripts/**/*.js')
     .pipe($.sourcemaps.init())
     .pipe($.uglify())
+    // Add .min to the filename for minified files
+    .pipe($.rename(function(path) {
+      path.extname = '.min.js';
+    }))
     .pipe($.sourcemaps.write('.'))
     .pipe(dest('scripts'));
 }
@@ -57,7 +61,7 @@ function images() {
 // BrowserSync
 function serve(done) {
   browserSync.init({
-    proxy: "nattosoup.dev.dd",
+    proxy: "drupal-8-project.ddev.site",
     open: false,
     notify: false
   });
