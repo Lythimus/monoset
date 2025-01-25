@@ -29,11 +29,12 @@
     &:last-child {
       border: none;
     }
+    &:hover .date,
+    &:hover p a,
     &:hover {
       background: variables.$blue;
     }
     &:hover .date,
-    &:hover p a,
     &:hover h2 a {
       color: variables.$white;
     }

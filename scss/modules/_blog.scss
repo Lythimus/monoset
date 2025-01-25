@@ -22,11 +22,10 @@
     }
 
     &:nth-child(even) {
+      border-right: none;
       @include mixins.breakpoint(md) {
         padding: 2rem 0 2rem 2rem;
       }
-
-      border-right: none;
     }
     &:last-child {
       border-bottom: none;

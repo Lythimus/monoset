@@ -11,9 +11,9 @@
   },
   "devDependencies": {
     "browser-sync": "^2.29.3",
+    "glob": "^11.0.1",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
-    "gulp-dart-sass": "^1.1.0",
     "gulp-imagemin": "^7.1.0",
     "gulp-load-plugins": "^2.0.8",
     "gulp-notify": "^4.0.0",
@@ -21,7 +21,7 @@
     "gulp-sass": "^5.1.0",
     "gulp-sourcemaps": "^3.0.0",
     "gulp-uglify": "^3.0.2",
-    "sass": "^1.62.1"
+    "sass": "^1.83.1"
   },
   "dependencies": {
     "breakpoint-sass": "^3.0.0"

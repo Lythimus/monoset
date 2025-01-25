@@ -1,5 +1,5 @@
 const { src, dest, watch, series, parallel } = require('gulp');
-const dartSass = require('gulp-dart-sass');
+const sass = require('gulp-sass')(require('sass'));
 const browserSync = require('browser-sync').create();
 const gulpLoadPlugins = require('gulp-load-plugins');
 const $ = gulpLoadPlugins();
@@ -18,10 +18,9 @@ const reportError = function(error) {
 function styles() {
   return src('scss/**/*.scss')
     .pipe($.sourcemaps.init())
-    .pipe(dartSass({
-      outputStyle: 'expanded',  // Changed from 'nested' to 'expanded'
-      precision: 10
-    }).on('error', dartSass.logError))
+    .pipe(sass({
+      outputStyle: 'expanded'
+    }).on('error', sass.logError))
     .pipe($.autoprefixer())
     .pipe($.sourcemaps.write('.'))
     .pipe(dest('styles'))
@@ -33,10 +32,7 @@ function scripts() {
   return src('scripts/**/*.js')
     .pipe($.sourcemaps.init())
     .pipe($.uglify())
-    // Add .min to the filename for minified files
-    .pipe($.rename(function(path) {
-      path.extname = '.min.js';
-    }))
+    .pipe($.rename({ extname: '.min.js' }))
     .pipe($.sourcemaps.write('.'))
     .pipe(dest('scripts'));
 }

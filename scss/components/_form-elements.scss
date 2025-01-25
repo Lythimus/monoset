@@ -37,19 +37,20 @@ input[type="submit"], a.button {
   display: block;
   border: none;
   background-color: variables.$natalt;
-  &:hover {
-    background-color: variables.$nataccent;
-    font-weight: bold;
-  }
   width: 100%;
   padding: 1rem;
   margin: 0 0 1rem;
   cursor: pointer;
   color: variables.$white;
-  @include mixins.font-size(14px);
-  letter-spacing: 1px;
   transition: all 0.3s;
-  text-align: center;
+  &:hover {
+    font-weight: bold;
+    width: 100%;
+    margin: 0 0 1rem;
+    cursor: pointer;
+    @include mixins.font-size(14px);
+    transition: all 0.3s;
+  }
 }
 
 input[type="text"]:focus,

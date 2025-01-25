@@ -1,8 +1,2 @@
-(function ($, Drupal) {
-
-  Drupal.behaviors.frontPage = {
-    attach: function (context, settings) {
-
-    }
-  };
-})(jQuery, Drupal);
+jQuery,Drupal.behaviors.frontPage={attach:function(a,r){}};
+//# sourceMappingURL=front.js.map

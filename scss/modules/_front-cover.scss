@@ -1335,7 +1335,7 @@ footer.node__meta {
   }
 }
 
-#block-views-block-shop-catalog-menu-block-1 {
+#block-views-block-shop-catalog-menu-block-1, .taxonomy-filter-link {
   & {
     display: flex;
     justify-content: space-around;
@@ -1345,22 +1345,22 @@ footer.node__meta {
   }
 
   /* Style for inactive buttons */
-  & .views-row a.inactive {
+  & .views-row a.inactive, .taxonomy-filter-item a.inactive {
     background-color: #DB3B04;
     opacity: 0.7;
     border: default;
   }
 
-  & .views-row a.inactive:hover {
+  & .views-row a.inactive:hover, .taxonomy-filter-item a.inactive:hover {
     opacity: 1;
   }
 
-  & .views-row {
+  & .views-row, .taxonomy-filter-item {
     list-style: none;
     display: inline-block;
   }
 
-  & .views-row a {
+  & .views-row a, .taxonomy-filter-item a.taxonomy-filter-link {
     display: inline-block;
     padding: 10px 20px;
     margin: 0 5px;
@@ -1373,7 +1373,7 @@ footer.node__meta {
     transition: background-color 0.3s ease, border-color 0.3s ease;
   }
 
-  & .views-row a:hover, & .views-row a:focus {
+  & .views-row a:hover, & .views-row a:focus, .taxonomy-filter-item a.taxonomy-filter-link:focus {
     background-color: #29335C;
     border-color: #29335C;
   }
@@ -1387,5 +1387,16 @@ footer.node__meta {
 
   & .views-row {
       margin-bottom: 10px;
+  }
+
+  & .all-items-link {
+    display: inline-block;
+    padding: 5px 10px;
+    text-decoration: none;
+  }
+  
+  & .all-items-link.active {
+    background-color: #007bff;
+    color: white;
   }
 }
